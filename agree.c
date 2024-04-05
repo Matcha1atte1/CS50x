@@ -4,5 +4,8 @@
 int main(void)
 {
     //prompt user to agree
-    char c = 
+    char c = get_char ("Do you agree? ");
+
+    //check whether agreed
+    if (c)
 }
