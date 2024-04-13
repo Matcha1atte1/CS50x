@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <cs50.h>
+
+int add(int a, int b);
+
 int main(void)
 {
     //prompt user for x
@@ -9,5 +12,10 @@ int main(void)
     int y = get_int ("y: ");
 
     //perform addition
-    printf ("%i\n", x + y);
+    printf ("%i\n", add(x, y));
+}
+
+int add(int a, int b)
+{
+    return a + b
 }
