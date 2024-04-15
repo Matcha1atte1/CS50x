@@ -1,16 +1,17 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
-    //prompt user for positive integer
+    // prompt user for positive integer
     int height, row, column, space;
-    do {
+    do
+    {
         height = get_int("Height: ");
     }
     while (height < 1);
 
-    //print pyramid of inputted height
+    // print pyramid of inputted height
     for (row = 0; row < height; row++)
     {
         for (space = 0; space < height - row - 1; space++)
