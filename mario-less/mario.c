@@ -13,7 +13,7 @@ int main (void)
     //print pyramid of inputted height
     for (row = 0; row < height; row++)
     {
-        for (space = 0; )
+        for (space = 0; space < height - row - 1)
         for (column = 0; column <= row; column++)
         {
             printf("#");
