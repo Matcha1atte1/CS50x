@@ -18,5 +18,6 @@ int main (void)
             printf("#");
         }
         printf("\n");
+        if (i+j < n)
     }
 
