@@ -18,3 +18,8 @@ int main(void)
     cents = cents - (quarters * 25)
 }
 
+int calculate_quarters(int cents)
+{
+    
+}
+
