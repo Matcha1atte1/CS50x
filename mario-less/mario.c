@@ -10,8 +10,12 @@ int main (void)
     }
     while (n < 1);
 
-    //print n height pyramid
-    for (int i = 0; i < n; )
+    //print n height pyramid with spaces
+    for (int i = 0; i < n; i++)
+    {
+        printf(" ");
+    }
+
 
 
 }
