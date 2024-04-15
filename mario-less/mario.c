@@ -10,6 +10,9 @@ int main (void)
     }
     while (n < 1);
 
-    
+    //print n height pyramid
+    for (int i = 0; )
+
+
 }
 
