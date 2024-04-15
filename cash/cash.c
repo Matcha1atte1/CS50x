@@ -1,7 +1,11 @@
 #include <cs50.h>
 #include <stdio.h>
+
+int calculate_quarters(int cents);
+
 int main(void)
 {
+    
     //prompt user for integer change
     int cents;
     do
