@@ -4,7 +4,7 @@
 int main (void)
 {
     //prompt user for positive integer
-    int height, row;
+    int height, row, column;
     do {
         height = get_int("Height: ");
     }
@@ -13,12 +13,9 @@ int main (void)
     //print pyramid of n height
     for (row = 0; row < n; row++)
     {
-        for (column = 0; j < n; j++)
+        for (column = 0; column < n; column++)
         {
-            if (i + j < n - 1)
-                printf(" ");
-            else
-                printf("#");
+
         }
         printf("\n");
     }
