@@ -13,16 +13,10 @@ int main (void)
     //print n height pyramid
     for (int i = 0; i < n; i++)
     {
-        printf("#\n");
+        for (int j = 0; j < n,j++)
+        {
+            printf("#");
+        }
+        printf("\n");
     }
-    //print horizontal # n number
-    for (int i = 0; i < n; i++)
-    {
-    
-    }
-
-
-
-
-}
 
