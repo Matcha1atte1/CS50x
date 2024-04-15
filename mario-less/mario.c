@@ -13,9 +13,9 @@ int main (void)
     //print pyramid of n height
     for (row = 0; row < n; row++)
     {
-        for (column = 0; column < n; column++)
+        for (column = 0; column <= row; column++)
         {
-
+            printf("#");
         }
         printf("\n");
     }
