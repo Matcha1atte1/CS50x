@@ -8,5 +8,5 @@ int main(void)
     {
         change = get_int ("Change owed: ");
     }
-    while(change < 1);
+    while(change < 0);
 }
