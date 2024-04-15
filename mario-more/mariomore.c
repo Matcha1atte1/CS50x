@@ -20,7 +20,8 @@ int main(void)
             printf("#");
         }
         printf("  ");
-        
-    printf("\n");
+
+        printf("\n");
     }
+    for (row = 0; row < height; )
 }
