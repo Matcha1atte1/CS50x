@@ -10,7 +10,7 @@ int main(void)
         n = get_int ("Size: ");
     }
     while (n < 1);
-
+    
     //print an n x n grid of blocks
     for (int i = 0; i < n; i++)
     {
