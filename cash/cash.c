@@ -10,3 +10,4 @@ int main(void)
     }
     while(cents < 0);
 }
+
