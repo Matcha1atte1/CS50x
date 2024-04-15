@@ -3,10 +3,10 @@
 int main(void)
 {
     //prompt user for integer change
-    int change;
+    int cents;
     do
     {
-        change = get_int ("Change owed: ");
+        cents = get_int ("Change owed: ");
     }
-    while(change < 0);
+    while(cents < 0);
 }
