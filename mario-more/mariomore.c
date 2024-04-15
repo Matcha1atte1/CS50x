@@ -11,14 +11,14 @@ int main(void)
 
     for (row = 0; row < height; row++)
     {
-        for (space = 0; space = height - row - 1; space++)
+        for (space = 0; space < height - row - 1; space++)
         {
-            printf(" ")
+            printf(" ");
         }
         for (column = 0; column <= row; column++)
         {
             printf("#");
         }
     }
-    printf("\n")
+    printf("\n");
 }
