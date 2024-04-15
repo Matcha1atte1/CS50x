@@ -4,16 +4,16 @@
 int main (void)
 {
     //prompt user for positive integer
-    int n;
+    int height, row;
     do {
-        n = get_int("Height: ");
+        height = get_int("Height: ");
     }
-    while (n < 1);
+    while (height < 1);
 
-    //print n height pyramid
-    for (int i = 0; i < n; i++)
+    //print pyramid of n height
+    for (row = 0; row < n; row++)
     {
-        for (int j = 0; j < n; j++)
+        for (column = 0; j < n; j++)
         {
             if (i + j < n - 1)
                 printf(" ");
