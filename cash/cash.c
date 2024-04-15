@@ -5,7 +5,7 @@ int calculate_quarters(int cents);
 
 int main(void)
 {
-    
+
     //prompt user for integer change
     int cents;
     do
@@ -13,5 +13,7 @@ int main(void)
         cents = get_int ("Change owed: ");
     }
     while(cents < 0);
+
+    int quarters = calculate_quarters(cents)
 }
 
