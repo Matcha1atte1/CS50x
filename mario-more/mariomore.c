@@ -20,9 +20,8 @@ int main(void)
             printf("#");
         }
         printf("  ");
-
-        printf("\n");
     }
+    
     for (row = 0; row < height; row++)
     {
         for (column = 0; column <= row; column++)
