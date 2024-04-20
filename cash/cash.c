@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 int calculate_quarters(int cents);
+int calculate_dimes(int cents);
 
 int main(void)
 {
@@ -17,6 +18,9 @@ int main(void)
     //calculate how many quarters to give customer
     int quarters = calculate_quarters(cents)
     cents = cents - (quarters * 25)
+
+    //calculate how many dimes to give customer
+    
 }
 
 int calculate_quarters(int cents)
@@ -29,5 +33,17 @@ int calculate_quarters(int cents)
         cents = cents - 25
     }
     return quarters;
+}
+
+int calculate_dimes(int cents)
+{
+    //calculate how many dimes to give customer
+    int dimes = 0
+    while(cents >= 10)
+    {
+        dimes++
+        cents = cents - 10
+    }
+    return dimes;
 }
 
