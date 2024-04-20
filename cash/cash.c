@@ -18,8 +18,8 @@ int main(void)
     while(cents < 0);
 
     //calculate how many quarters to give customer
-    int quarters = calculate_quarters(cents)
-    cents = cents - (quarters * 25)
+    int quarters = calculate_quarters(cents);
+    cents = cents - (quarters * 25);
 
     //calculate how many dimes to give customer
     int dimes = calculate_dimes(cents)
@@ -34,7 +34,7 @@ int main(void)
     cents = cents - (pennies * 1)
 
     //sum total coins used
-    int coins = quarters + dimes + nickels + pennies 
+    int coins = quarters + dimes + nickels + pennies
 }
 
 int calculate_quarters(int cents)
