@@ -6,7 +6,7 @@ int calculate_quarters(int cents);
 int main(void)
 {
 
-    //prompt user for integer change owed in cents 
+    //prompt user for integer change owed in cents
     int cents;
     do
     {
@@ -20,6 +20,7 @@ int main(void)
 
 int calculate_quarters(int cents)
 {
+    //calculate how many quarters to give customer 
     int quarter = 0
     while(cents >= 25)
     {
