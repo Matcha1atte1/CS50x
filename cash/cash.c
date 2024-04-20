@@ -6,7 +6,7 @@ int calculate_quarters(int cents);
 int main(void)
 {
 
-    //prompt user for integer change
+    //prompt user for integer change owed in cents 
     int cents;
     do
     {
