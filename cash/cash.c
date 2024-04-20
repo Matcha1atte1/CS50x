@@ -29,7 +29,9 @@ int main(void)
     int nickels = calculate_nickels(cents)
     cents = cents - (nickels * 5)
 
-    //calculate how many pennies to give customer 
+    //calculate how many pennies to give customer
+    int pennies = calculate_pennies(cents)
+    cents = cents - (pennies * 1)
 }
 
 int calculate_quarters(int cents)
