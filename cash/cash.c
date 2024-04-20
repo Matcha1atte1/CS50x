@@ -36,7 +36,8 @@ int main(void)
     //sum total coins used
     int coins = quarters + dimes + nickels + pennies;
 
-    //
+    //print the sum of coins used
+    
 }
 
 int calculate_quarters(int cents)
