@@ -20,8 +20,8 @@ int main(void)
 
 int calculate_quarters(int cents)
 {
-    //calculate how many quarters to give customer 
-    int quarter = 0
+    //calculate how many quarters to give customer
+    int quarters = 0
     while(cents >= 25)
     {
         quarter++
