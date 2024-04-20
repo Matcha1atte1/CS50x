@@ -4,6 +4,7 @@
 int calculate_quarters(int cents);
 int calculate_dimes(int cents);
 int calculate_nickels(int cents);
+int calculate_pennies(int cents);
 
 int main(void)
 {
@@ -27,6 +28,8 @@ int main(void)
     //calculate how many nickels to give customer
     int nickels = calculate_nickels(cents)
     cents = cents - (nickels * 5)
+
+    //calculate how many pennies to give customer 
 }
 
 int calculate_quarters(int cents)
@@ -63,5 +66,17 @@ int calculate_nickels(int cents)
         cents = cents - 5
     }
     return nickels;
+}
+
+int calculate_pennies(int cents)
+{
+    //calculate how many pennies to give customer
+    int pennies = 0
+    while(cents >= 1)
+    {
+        pennies++
+        cents = cents - 1
+    }
+    return pennies;
 }
 
