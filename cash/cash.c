@@ -32,6 +32,9 @@ int main(void)
     //calculate how many pennies to give customer
     int pennies = calculate_pennies(cents)
     cents = cents - (pennies * 1)
+
+    //sum total coins used
+    int coins = quarters + dimes + nickels + pennies 
 }
 
 int calculate_quarters(int cents)
