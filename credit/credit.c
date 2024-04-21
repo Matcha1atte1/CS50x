@@ -1,11 +1,12 @@
 #include <cs50.h>
 #include <stdio.h>
 
-long main(void)
+int main(void)
 {
-    long number;
+    long card;
     do
     {
-        
+        card = get_long("Card no: ");
     }
+    while(card < 0)
 }
