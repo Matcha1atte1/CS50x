@@ -3,7 +3,7 @@
 int main(void)
 {
     // get scores
-    const int N = 3 
+    const int N = 3;
     int scores[N];
     for(int i = 0; i < N; i++)
     {
