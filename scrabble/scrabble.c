@@ -21,6 +21,9 @@
     }
     int compute_score(string word);
     {
-        //compute and return score for each word
-        
+        //keep track of score
+        int score = 0
+
+        //compute 
+
     })
