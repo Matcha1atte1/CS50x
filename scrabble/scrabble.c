@@ -22,4 +22,5 @@
     int compute_score(string word);
     {
         //compute and return score for each word
+        
     })
