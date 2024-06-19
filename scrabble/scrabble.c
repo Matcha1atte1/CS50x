@@ -33,7 +33,7 @@
             }
             else if(islower(word[i]))
             {
-                score += POINTS[word[i] - ]
+                score += POINTS[word[i] - 97];
             }
-
-}
+            return score;
+        }
