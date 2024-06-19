@@ -49,6 +49,6 @@
             {
                 score += POINTS[word[i] - 97];
             }
-            return score;
         }
+            return score;
     }
