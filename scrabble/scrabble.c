@@ -4,7 +4,7 @@
     #include<string.h>
 
     //points assigned to each letter of the alphabet
-    
+    int POINTS[] = 
     int compute_score(string word);
 
     int main(void)
