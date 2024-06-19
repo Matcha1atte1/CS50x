@@ -10,5 +10,5 @@
         string word2 = get_string("Player 2: ");
 
         //compute the score of each word
-        int score1 = 
+        int score1 = int compute_score(word)
     }
