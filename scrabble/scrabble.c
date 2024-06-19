@@ -3,6 +3,7 @@
     #include<stdio.h>
     #include<string.h>
 
+    int compute_score(string word);
     int main(void)
     {
         //prompt the user for two words
@@ -10,5 +11,5 @@
         string word2 = get_string("Player 2: ");
 
         //compute the score of each word
-        int score1 = int compute_score(word)
+        int score1 = compute_score( string word)
     }
