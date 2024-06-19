@@ -24,6 +24,7 @@
         //keep track of score
         int score = 0
 
-        //compute 
+        //compute score for each character
+
 
     })
