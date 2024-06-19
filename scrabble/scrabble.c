@@ -29,7 +29,8 @@
         {
             if(isupper(word[i]))
             {
-                score += POINTS[]
+                score += POINTS[word[i] - 65];
             }
+            else if 
 
 }
