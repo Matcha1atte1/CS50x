@@ -33,10 +33,10 @@
         }
     }
 
-    int compute_score(string word);
+    int compute_score(string word)
     {
         //keep track of score
-        int score = 0
+        int score = 0;
 
         //compute score for each character
         for(int i = 0, length = strlen(word); i < length; i++)
