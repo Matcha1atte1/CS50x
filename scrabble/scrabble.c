@@ -3,8 +3,10 @@
     #include<stdio.h>
     #include<string.h>
 
-    int compute_score(string word);
+    //points assigned to each letter of the alphabet
     
+    int compute_score(string word);
+
     int main(void)
     {
         //prompt the user for two words
