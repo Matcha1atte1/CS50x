@@ -29,7 +29,7 @@
         {
             if(isupper(word[i]))
             {
-                score =
+                score = POINTS[]
             }
 
 }
