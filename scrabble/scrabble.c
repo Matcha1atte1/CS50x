@@ -19,9 +19,10 @@
         int score2 = compute_score(word2);
 
         //print the winner
-        if (score)
-
-    }
+        if (score1 > score2)
+        {
+            printf("Player 1 wins)
+        }
     int compute_score(string word);
     {
         //keep track of score
