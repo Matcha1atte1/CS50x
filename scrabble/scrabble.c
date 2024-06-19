@@ -27,9 +27,9 @@
         //compute score for each character
         for(int i = 0, length = strlen(word); i < length; i++)
         {
-            if(isupper(word[i]));
-            score = 
-        }
+            if(isupper(word[i]))
+            {
+                score =
+            }
 
-
-    })
+}
