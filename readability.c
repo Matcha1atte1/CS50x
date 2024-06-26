@@ -1,1 +1,19 @@
-#include
+#include<cs50.h>
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<math.h>
+
+int main(void)
+{
+    //Prompt the user for text
+    string text = get_string("Text: ");
+
+    //Count the number of letters, words and sentences in the text
+
+    //Compute the coleman-liau index
+
+    //Print the grade level
+
+
+}
