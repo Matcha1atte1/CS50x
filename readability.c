@@ -15,5 +15,11 @@ int main(void)
 
     //Print the grade level
 
-
 }
+
+int count_letters(string text)
+{
+    //return the number of letters in the text
+    
+}
+
