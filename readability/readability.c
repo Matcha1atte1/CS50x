@@ -32,3 +32,8 @@ int count_letters(string text)
     }
     return count;
 }
+
+int count_words(string text)
+{
+    
+}
