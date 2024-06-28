@@ -35,5 +35,5 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    
+    //return the number of words in the text
 }
