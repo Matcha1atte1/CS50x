@@ -39,6 +39,12 @@ int count_words(string text)
     //return the number of words in the text
     //number of words = spaces + 1
     int countw = 1;
-    for(int i = 0, )
+    for(int i = 0, length = strlen(text); i < length; i++)
+    {
+        if(isspace(text[i]))
+        {
+            
+        }
+    }
 
 }
