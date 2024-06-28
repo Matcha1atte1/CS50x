@@ -23,7 +23,7 @@ int main(void)
 int count_letters(string text)
 {
     //return the number of letters in the text
-    int count = 0;
+    int countl = 0;
     for(int i = 0, length = strlen(text); i < length; i++)
     {
         if(isalpha(text[i]))
@@ -37,5 +37,8 @@ int count_letters(string text)
 int count_words(string text)
 {
     //return the number of words in the text
-    
+    //number of words = spaces + 1
+    int countw = 1;
+    for(int i = 0, )
+
 }
