@@ -14,14 +14,14 @@ int main(void)
     string text = get_string("Text: ");
 
     //Count the number of letters, words and sentences in the text
-    int letters = int count_letters(text);
-    int words = int count_words(text);
-    int sentences = int count_sentences(text);
+    float letters = int count_letters(text);
+    float words = int count_words(text);
+    float sentences = int count_sentences(text);
 
     //Compute the coleman-liau index
     int L = (letters/words)*100
     int S = (sentences/words)*100
-    
+
     //Print the grade level
 
 }
