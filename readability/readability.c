@@ -28,10 +28,10 @@ int count_letters(string text)
     {
         if(isalpha(text[i]))
         {
-            count++;
+            countl++;
         }
     }
-    return count;
+    return countl;
 }
 
 int count_words(string text)
@@ -46,6 +46,5 @@ int count_words(string text)
             countw++;
         }
     }
-    return countw
-
+    return countw;
 }
