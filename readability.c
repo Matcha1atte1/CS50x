@@ -22,7 +22,7 @@ int main(void)
 int count_letters(string text)
 {
     //return the number of letters in the text
-    if(islpha(string text))
+    if()
 
 }
 
