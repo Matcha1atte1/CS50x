@@ -48,3 +48,9 @@ int count_words(string text)
     }
     return countw;
 }
+
+int count_sentences(string text)
+{
+    //return the number of sentences in the text
+    
+}
