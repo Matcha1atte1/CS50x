@@ -4,6 +4,8 @@
 #include<ctype.h>
 #include<math.h>
 
+int count_letters(string text);
+
 int main(void)
 {
     //Prompt the user for text
@@ -20,6 +22,6 @@ int main(void)
 int count_letters(string text)
 {
     //return the number of letters in the text
-    
+
 }
 
