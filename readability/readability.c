@@ -61,4 +61,5 @@ int count_sentences(string text)
             counts++;
         }
     }
+    return counts;
 }
