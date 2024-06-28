@@ -20,6 +20,7 @@ int main(void)
 
     //Compute the coleman-liau index
     int L = (letters/words)*100
+    int S = (sentences/words)*100
     
     //Print the grade level
 
