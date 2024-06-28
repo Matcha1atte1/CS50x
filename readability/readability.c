@@ -6,6 +6,7 @@
 
 int count_letters(string text);
 int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
@@ -52,5 +53,9 @@ int count_words(string text)
 int count_sentences(string text)
 {
     //return the number of sentences in the text
-    
+    int counts = 0;
+    for(int i = 0, length = strlen(text); i < length; i++)
+    {
+        if(is)
+    }
 }
