@@ -25,7 +25,15 @@ int main(void)
     round(index);
 
     //Print the grade level
-    
+    if(index >= 16)
+    {
+        printf("Grade 16+");
+    }
+    else
+    {
+        printf("Grade index )
+    }
+
 
 }
 
