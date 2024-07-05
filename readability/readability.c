@@ -4,9 +4,9 @@
 #include<ctype.h>
 #include<math.h>
 
-float count_letters(string text);
-float count_words(string text);
-float count_sentences(string text);
+int count_letters(string text);
+int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
@@ -14,15 +14,16 @@ int main(void)
     string text = get_string("Text: ");
 
     //Count the number of letters, words and sentences in the text
-    float letters = float count_letters(text);
-    float words = float count_words(text);
-    float sentences = float count_sentences(text);
+    float letters = count_letters(text);
+    float words = count_words(text);
+    float sentences = count_sentences(text);
 
     //Compute the coleman-liau index
-    int L = (letters/words)*100
-    int S = (sentences/words)*100
-    float index = 0.0588*L - 0.296*S - 15.8
+    int L = (letters/words)*100;
+    int S = (sentences/words)*100;
+    float index = 0.0588*L - 0.296*S - 15.8;
     round(index);
+    return index;
 
     //Print the grade level
     if(index >= 16)
@@ -35,7 +36,7 @@ int main(void)
     }
 }
 
-float count_letters(string text)
+int count_letters(string text)
 {
     //return the number of letters in the text
     int countl = 0;
@@ -49,7 +50,7 @@ float count_letters(string text)
     return countl;
 }
 
-float count_words(string text)
+int count_words(string text)
 {
     //return the number of words in the text
     //number of words = spaces + 1
@@ -64,7 +65,7 @@ float count_words(string text)
     return countw;
 }
 
-float count_sentences(string text)
+int count_sentences(string text)
 {
     //return the number of sentences in the text
     int counts = 0;
