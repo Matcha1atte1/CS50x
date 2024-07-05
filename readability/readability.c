@@ -22,17 +22,21 @@ int main(void)
     int L = (letters/words)*100;
     int S = (sentences/words)*100;
     float index = 0.0588*L - 0.296*S - 15.8;
-    double roun
+    double number = index;
+    double rounded_number = round(number);
 
     //Print the grade level
     if(index >= 16)
     {
         printf("Grade 16+");
     }
+    printf("\n");
+    
     else if(index < 1)
     {
         printf("Before Grade 1");
     }
+    printf("\n");
 }
 
 int count_letters(string text)
