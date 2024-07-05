@@ -4,9 +4,9 @@
 #include<ctype.h>
 #include<math.h>
 
-int count_letters(string text);
-int count_words(string text);
-int count_sentences(string text);
+float count_letters(string text);
+float count_words(string text);
+float count_sentences(string text);
 
 int main(void)
 {
@@ -14,9 +14,9 @@ int main(void)
     string text = get_string("Text: ");
 
     //Count the number of letters, words and sentences in the text
-    float letters = int count_letters(text);
-    float words = int count_words(text);
-    float sentences = int count_sentences(text);
+    float letters = float count_letters(text);
+    float words = float count_words(text);
+    float sentences = float count_sentences(text);
 
     //Compute the coleman-liau index
     int L = (letters/words)*100
@@ -35,7 +35,7 @@ int main(void)
     }
 }
 
-int count_letters(string text)
+float count_letters(string text)
 {
     //return the number of letters in the text
     int countl = 0;
@@ -49,7 +49,7 @@ int count_letters(string text)
     return countl;
 }
 
-int count_words(string text)
+float count_words(string text)
 {
     //return the number of words in the text
     //number of words = spaces + 1
@@ -64,7 +64,7 @@ int count_words(string text)
     return countw;
 }
 
-int count_sentences(string text)
+float count_sentences(string text)
 {
     //return the number of sentences in the text
     int counts = 0;
