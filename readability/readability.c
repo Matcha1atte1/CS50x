@@ -37,6 +37,12 @@ int main(void)
         printf("Before Grade 1");
     }
     printf("\n");
+
+    
+    {
+        printf("Grade" index);
+    }
+    printf("\n")"
 }
 
 int count_letters(string text)
