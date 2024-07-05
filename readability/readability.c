@@ -32,13 +32,13 @@ int main(void)
     }
     printf("\n");
 
-    if(index < 1)
+    else if(index < 1)
     {
         printf("Before Grade 1");
     }
     printf("\n");
 
-    
+    else
     {
         printf("Grade" index);
     }
