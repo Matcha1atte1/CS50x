@@ -26,23 +26,23 @@ int main(void)
     double rounded_number = round(number);
 
     //Print the grade level
-    if(index >= 16)
+    if(number >= 16)
     {
         printf("Grade 16+");
+        printf("\n");
     }
-    printf("\n");
 
-    else if(index < 1)
+    else if(number < 1)
     {
         printf("Before Grade 1");
+        printf("\n");
     }
-    printf("\n");
 
     else
     {
-        printf("Grade" index);
+        printf("Grade" number);
+        printf("\n")";
     }
-    printf("\n")"
 }
 
 int count_letters(string text)
