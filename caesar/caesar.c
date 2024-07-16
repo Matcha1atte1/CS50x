@@ -17,7 +17,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    // Make sure every character is argv[1] is a digit
+    // Make sure every character in argv[1] is a digit
 
     if only_digits(argv[1]) == false
     {
@@ -26,7 +26,7 @@ int main(int argc, string argv[])
     }
 
     // Convert argv[1] from a string to an int
-    int number = atoi(argv[1]);
+    int key = atoi(argv[1]);
 
     // Prompt user for plaintext
     string plaintext = get_string("plaintext: ");
@@ -34,7 +34,7 @@ int main(int argc, string argv[])
     // For each character in the plaintext:
     for(int i = 0; length = strlen(plaintext); i < length; i++)
     {
-        
+
     }
 
     // Rotate the character if it is a letter
