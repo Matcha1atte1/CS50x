@@ -55,6 +55,8 @@ char rotate(char c, int n)
 {
     if(isupper(c))
     {
-        int A = 
+        char c = 'A';
+        
+
     }
 }
