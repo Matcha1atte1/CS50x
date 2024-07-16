@@ -16,19 +16,19 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    // Make sure every character is argv[1] is a digit
+
     if only_digits(argv[1]) == false
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
 
-
-
-    // Make sure every character is argv[1] is a digit
-
     // Convert argv[1] from a string to an int
+    int number = atoi(argv[1]);
 
     // Prompt user for plaintext
+    string plaintext = get_string("plaintext: ");
 
     // For each character in the plaintext:
 
