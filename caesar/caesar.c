@@ -31,10 +31,12 @@ int main(int argc, string argv[])
     // Prompt user for plaintext
     string plaintext = get_string("plaintext: ");
 
+    printf("ciphertext: ");
+
     // For each character in the plaintext:
     for(int i = 0; length = strlen(plaintext); i < length; i++)
     {
-
+        char rotate(plaintext[i], key)
     }
 
     // Rotate the character if it is a letter
@@ -67,7 +69,7 @@ char rotate(char c, int n)
         if(islower(c))
         {
             char shifted_charlower = ((c - 97) + n) % 26) + 'a';
-            printf("%c", shifted_charlower)
+            printf("%c", shifted_charlower);
         }
     }
  }
