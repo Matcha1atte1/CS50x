@@ -32,7 +32,10 @@ int main(int argc, string argv[])
     string plaintext = get_string("plaintext: ");
 
     // For each character in the plaintext:
-    for(int i = 0; length = strlen(plaintext); i < length)
+    for(int i = 0; length = strlen(plaintext); i < length; i++)
+    {
+        
+    }
 
     // Rotate the character if it is a letter
 }
