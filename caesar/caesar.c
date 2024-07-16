@@ -59,11 +59,11 @@ char rotate(char c, int n)
     {
         if(isupper(c))
         {
-            char shifted_charupper = ((c - 65) + n ) % 26) + 'A';
+            char shifted_charupper = (((c - 65) + n ) % 26) + 'A');
         }
         if(islower(c))
         {
-            char shifted_charlower = ((c - 97) + n) % 26) + 'a';
+            char shifted_charlower = (((c - 97) + n) % 26; + 'a');
         }
     }
  }
