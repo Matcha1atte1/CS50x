@@ -57,7 +57,7 @@ char rotate(char c, int n)
     {
         if(isupper(c))
         {
-            
+            char shifted_char = ((c - 65) + n ) % 26)
         }
     }
 
