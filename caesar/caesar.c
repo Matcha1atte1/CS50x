@@ -36,5 +36,9 @@ bool only_digits(string s)
         {
             return true;
         }
+        else
+        {
+            return false;
+        }
     }
 }
