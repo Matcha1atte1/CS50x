@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 
+bool only_digits(string s);
+
 int main(int argc, string argv[])
 {
     // Make sure program was run with just one command-line argument
@@ -26,7 +28,7 @@ int main(int argc, string argv[])
     // Rotate the character if it is a letter
 }
 
-only_digits
+bool only_digits(string s)
 {
     
 }
