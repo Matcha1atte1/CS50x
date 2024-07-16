@@ -55,7 +55,10 @@ char rotate(char c, int n)
 {
     if(isalpha(c))
     {
-        
+        if(isupper(c))
+        {
+            
+        }
     }
     if(isupper(c))
     {
