@@ -61,9 +61,8 @@ char rotate(char c, int n)
         }
         if(islower(c))
         {
-            char shifted_charlower = ((c - 97) + n) % 26) + 'a'
+            char shifted_charlower = ((c - 97) + n) % 26) + 'a';
         }
     }
-
-    }
+ }
 }
