@@ -4,4 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(int argc, )
+int main(int argc, string argv[])
+{
+    
+}
