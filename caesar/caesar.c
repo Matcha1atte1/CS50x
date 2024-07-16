@@ -6,5 +6,7 @@
 
 int main(int argc, string argv[])
 {
-    
+    // Make sure program was run with just one command-line argument
+
+    //
 }
