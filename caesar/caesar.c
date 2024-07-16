@@ -36,7 +36,7 @@ int main(int argc, string argv[])
     // For each character in the plaintext:
     for(int i = 0; length = strlen(plaintext); i < length; i++)
     {
-        char rotate(plaintext[i], key)
+        printf("%c", rotate(plaintext[i], key));
     }
 
     // Rotate the character if it is a letter
@@ -64,12 +64,10 @@ char rotate(char c, int n)
         if(isupper(c))
         {
             char shifted_charupper = ((c - 65) + n ) % 26) + 'A';
-            printf("%c", shifted_charupper);
         }
         if(islower(c))
         {
             char shifted_charlower = ((c - 97) + n) % 26) + 'a';
-            printf("%c", shifted_charlower);
         }
     }
  }
