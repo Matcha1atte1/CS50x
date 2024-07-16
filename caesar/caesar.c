@@ -3,7 +3,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
-#include <stdiolib.h>
+#include <stdlib.h>
 
 bool only_digits(string s);
 char rotate(char c, int n);
@@ -19,7 +19,7 @@ int main(int argc, string argv[])
 
     // Make sure every character in argv[1] is a digit
 
-    if only_digits(argv[1]) == false
+    if(only_digits(argv[1]) == false)
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -34,7 +34,7 @@ int main(int argc, string argv[])
     printf("ciphertext: ");
 
     // For each character in the plaintext:
-    for(int i = 0; length = strlen(plaintext); i < length; i++)
+    for(int i = 0, length = strlen(plaintext); i < length; i++)
     {
         printf("%c", rotate(plaintext[i], key));
     }
@@ -44,7 +44,7 @@ int main(int argc, string argv[])
 
 bool only_digits(string s)
 {
-    for(int i = 0; length = strlen(s); i < length; i++)
+    for(int i = 0, length = strlen(s); i < length; i++)
     {
         if(isdigit(s))
         {
