@@ -62,6 +62,7 @@ char rotate(char c, int n)
         if(isupper(c))
         {
             char shifted_charupper = ((c - 65) + n ) % 26) + 'A';
+            printf(")
         }
         if(islower(c))
         {
