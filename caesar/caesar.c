@@ -25,3 +25,8 @@ int main(int argc, string argv[])
 
     // Rotate the character if it is a letter
 }
+
+only_digits
+{
+    
+}
