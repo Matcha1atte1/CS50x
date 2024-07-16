@@ -15,6 +15,8 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    if (argv)
+
 
 
     // Make sure every character is argv[1] is a digit
