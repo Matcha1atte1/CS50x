@@ -10,12 +10,10 @@ int main(int argc, string argv[])
     if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
+        return 1;
     }
-    return 1 
-    else
-    {
-        printf
-    }
+
+
 
     // Make sure every character is argv[1] is a digit
 
