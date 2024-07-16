@@ -60,9 +60,6 @@ char rotate(char c, int n)
             
         }
     }
-    if(isupper(c))
-    {
-        char c = "A - 41"
 
     }
 }
