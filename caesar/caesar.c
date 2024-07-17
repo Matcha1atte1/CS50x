@@ -68,5 +68,11 @@ char rotate(char c, int n)
             return shifted_charlower
         }
     }
+    else
+    {
+        char unchanged = c;
+        return c;
+    }
  }
+ 
 
