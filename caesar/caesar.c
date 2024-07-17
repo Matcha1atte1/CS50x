@@ -38,7 +38,7 @@ int main(int argc, string argv[])
     {
         printf("%c", rotate(plaintext[i], key));
     }
-
+    return 0;
     // Rotate the character if it is a letter
 }
 
