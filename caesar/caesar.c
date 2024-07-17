@@ -23,6 +23,9 @@ int main(int argc, string argv[])
     {
         printf("Usage: ./caesar key\n");
         return 1;
+    else
+    {
+        return 0;
     }
 
     // Convert argv[1] from a string to an int
@@ -38,7 +41,6 @@ int main(int argc, string argv[])
     {
         printf("%c", rotate(plaintext[i], key));
     }
-    return 0;
     // Rotate the character if it is a letter
 }
 
