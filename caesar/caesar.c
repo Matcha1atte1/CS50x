@@ -66,6 +66,5 @@ char rotate(char c, int n)
             char shifted_charlower = ((c - 97) + n) % 26 + 'a';
         }
     }
-    return 0;
  }
 
