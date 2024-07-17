@@ -24,11 +24,6 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    
-    else
-    {
-        return 0;
-    }
 
     // Convert argv[1] from a string to an int
     int key = atoi(argv[1]);
