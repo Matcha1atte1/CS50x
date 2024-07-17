@@ -70,9 +70,9 @@ char rotate(char c, int n)
     }
     else
     {
-        char unchanged = c;
-        return c;
+        char unchanged_char = c;
+        return unchanged_char;
     }
  }
- 
+
 
