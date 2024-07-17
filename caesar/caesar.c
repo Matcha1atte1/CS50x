@@ -57,6 +57,7 @@ bool only_digits(string s)
 
 char rotate(char c, int n)
 {
+    char unchanged_char = c;
     if(isalpha(c))
     {
         if(isupper(c))
@@ -69,10 +70,6 @@ char rotate(char c, int n)
             char shifted_charlower = ((c - 97) + n) % 26 + 'a';
             return shifted_charlower;
         }
-    }
-    else
-    {
-        char unchanged_char = c;
     }
     return unchanged_char;
 }
