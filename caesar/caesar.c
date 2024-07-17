@@ -36,8 +36,9 @@ int main(int argc, string argv[])
     // For each character in the plaintext:
     for(int i = 0, length = strlen(plaintext); i < length; i++)
     {
-        printf("%c\n", rotate(plaintext[i], key));
+        printf("%c", rotate(plaintext[i], key));
     }
+    printf("\n");
     // Rotate the character if it is a letter
 }
 
