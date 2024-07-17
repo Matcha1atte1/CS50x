@@ -60,10 +60,12 @@ char rotate(char c, int n)
         if(isupper(c))
         {
             char shifted_charupper = ((c - 65) + n) % 26 + 'A';
+            return shifted_charupper;
         }
         if(islower(c))
         {
             char shifted_charlower = ((c - 97) + n) % 26 + 'a';
+            return shifted_charlower
         }
     }
  }
