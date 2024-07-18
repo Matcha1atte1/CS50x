@@ -11,7 +11,9 @@ int main(void)
         if(numbers[i] == n)
         {
             printf("Found\n");
+            return 0;
         }
     }
     printf("Not found\n");
+    return 1;
 }
