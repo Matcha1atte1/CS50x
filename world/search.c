@@ -13,4 +13,5 @@ int main(void)
             printf("Found\n");
         }
     }
+    printf("Not found\n");
 }
