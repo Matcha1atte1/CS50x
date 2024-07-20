@@ -85,8 +85,9 @@ bool vote(string name)
 void print_winner(void)
 {
     // find the maximum number of votes
+    int 
 
-    // print the candidate(s) with the maximum number of votes 
+    // print the candidate(s) with the maximum number of votes
     // TODO
     return;
 }
