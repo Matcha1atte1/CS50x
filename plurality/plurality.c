@@ -90,12 +90,13 @@ void print_winner(void)
     {
         if(candidate[i].votes > max_votes)
         {
-            int truemax_votes = candidate[i].votes;
-            return truemax_votes;
+          max_votes = candidate[i].votes;
         }
     }
+    return max_votes;
 
     // print the candidate(s) with the maximum number of votes
+    
     // TODO
     return;
 }
