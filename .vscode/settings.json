@@ -3,6 +3,8 @@
     "files.associations": {
         "stdio.h": "c",
         "cs50.h": "c",
-        "ctype.h": "c"
+        "ctype.h": "c",
+        "type_traits": "c",
+        "utility": "c"
     }
 }
