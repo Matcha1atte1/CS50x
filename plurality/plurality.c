@@ -58,6 +58,8 @@ int main(int argc, string argv[])
         }
     }
 
+    vote(name);
+
     // Display winner of election
     print_winner();
 }
