@@ -84,6 +84,9 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
+    // find the maximum number of votes
+
+    // print the candidate(s) with the maximum number of votes 
     // TODO
     return;
 }
