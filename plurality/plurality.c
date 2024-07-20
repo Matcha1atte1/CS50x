@@ -85,12 +85,12 @@ bool vote(string name)
 void print_winner(void)
 {
     // find the maximum number of votes
-    int max_votes = candidate[0].votes;
+    int max_votes = candidates[0].votes;
     for(int i = 0; i < candidate_count; i++)
     {
-        if(candidate[i].votes > max_votes)
+        if(candidates[i].votes > max_votes)
         {
-          max_votes = candidate[i].votes;
+          max_votes = candidates[i].votes;
         }
     }
     return max_votes;
@@ -98,9 +98,9 @@ void print_winner(void)
     // print the candidate(s) with the maximum number of votes
     for(int i = 0; i < candidate_count; i++)
     {
-        if(candidate[i].votes == max_votes)
+        if(candidates[i].votes == max_votes)
         {
-            printf("%s\n", candidate[i].name);
+            printf("%s\n", candidates[i].name);
         }
     }
 
