@@ -96,7 +96,14 @@ void print_winner(void)
     return max_votes;
 
     // print the candidate(s) with the maximum number of votes
-    
+    for(int i = 0; i < candidate_count; i++)
+    {
+        if(candidate[i].votes == max_votes)
+        {
+            printf("candidate[i].name\n");
+        }
+    }
+
     // TODO
     return;
 }
