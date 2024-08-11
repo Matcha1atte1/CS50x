@@ -175,6 +175,13 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+    for(int i = 0; i < candidate_count; i++)
+    {
+        for(candidates[i].eliminated == false)
+        {
+            
+        }
+    }
     return 0;
 }
 
