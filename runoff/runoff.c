@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 // Max voters and candidates
 #define MAX_VOTERS 100
@@ -175,7 +176,7 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
-    int min_votes = 9999
+    int min_votes = 9999;
     for(int i = 0; i < candidate_count; i++)
     {
         if(candidates[i].votes < min_votes && candidates[i].eliminated == false)
