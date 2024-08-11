@@ -160,10 +160,13 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
-    if(candidates[i].votes > 0.5*voter_count)
+    for(i = 0; i < candidate_count; i++)
     {
-        printf("%s\n", Candidates[i].name);
+        if(candidates[i].votes > 0.5*voter_count)
+        {
+        printf("%s\n", candidates[i].name);
         return true;
+        }
     }
     return false;
 }
