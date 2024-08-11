@@ -152,6 +152,7 @@ void tabulate(void)
             break;
             }
         }
+    }
     return;
 }
 
