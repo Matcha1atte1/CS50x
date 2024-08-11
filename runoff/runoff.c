@@ -128,12 +128,12 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    for(int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if(strcmp(name, candidates[i].name) == 0)
+        if (strcmp(name, candidates[i].name) == 0)
         {
-           preferences[voter][rank] = i;
-           return true;
+            preferences[voter][rank] = i;
+            return true;
         }
     }
     return false;
@@ -143,14 +143,14 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
-    for(int i = 0; i < voter_count; i++)
+    for (int i = 0; i < voter_count; i++)
     {
-        for(int j = 0; j < candidate_count; j++)
+        for (int j = 0; j < candidate_count; j++)
         {
-            if(candidates[preferences[i][j]].eliminated == false)
+            if (candidates[preferences[i][j]].eliminated == false)
             {
-            candidates[preferences[i][j]].votes++;
-            break;
+                candidates[preferences[i][j]].votes++;
+                break;
             }
         }
     }
@@ -161,12 +161,12 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
-    for(int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if(candidates[i].votes > 0.5*voter_count)
+        if (candidates[i].votes > 0.5 * voter_count)
         {
-        printf("%s\n", candidates[i].name);
-        return true;
+            printf("%s\n", candidates[i].name);
+            return true;
         }
     }
     return false;
@@ -177,9 +177,9 @@ int find_min(void)
 {
     // TODO
     int min_votes = 9999;
-    for(int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if(candidates[i].votes < min_votes && candidates[i].eliminated == false)
+        if (candidates[i].votes < min_votes && candidates[i].eliminated == false)
         {
             min_votes = candidates[i].votes;
         }
@@ -191,9 +191,9 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
-    for(int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if(candidates[i].votes != min && candidates[i].eliminated == false)
+        if (candidates[i].votes != min && candidates[i].eliminated == false)
         {
             return false;
         }
@@ -205,9 +205,9 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
-    for(int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if(candidates[i].votes == min)
+        if (candidates[i].votes == min)
         {
             candidates[i].eliminated = true;
         }
