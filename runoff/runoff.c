@@ -131,7 +131,7 @@ bool vote(int voter, int rank, string name)
     {
         if(strcmp(name, candidates[i].name) == 0)
         {
-           preferences[MAX_VOTERS][MAX_CANDIDATES] = preferences[i][j]
+           preferences[voter][rank] = 
         }
     }
     return false;
