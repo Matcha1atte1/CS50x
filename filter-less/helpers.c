@@ -38,15 +38,15 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int SB = round(sepiaBlue);
             if(SR > 255)
             {
-                int SR = 255;
+                SR = 255;
             }
             if(SG > 255)
             {
-                int SG = 255;
+                SG = 255;
             }
             if(SB > 255)
             {
-                int SB = 255;
+                SB = 255;
             }
 
             //Update pixel with sepia values
