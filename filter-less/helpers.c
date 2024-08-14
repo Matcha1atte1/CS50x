@@ -17,7 +17,6 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         image[i][j].rgbtblue = rounded;
         }
     }
-    //Update pixel values
     return;
 }
 
@@ -45,8 +44,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             }
 
             //Update pixel with sepia values
-            
-
+            image[i][j].rgbtred = SR;
+            image[i][j].rgbtgreen = SG;
+            image[i][j].rgbtblue = SB;
         }
     }
     return;
