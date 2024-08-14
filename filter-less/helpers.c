@@ -36,10 +36,16 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int SR = round(sepiaRed);
             int SG = round(sepiaGreen);
             int SB = round(sepiaBlue);
-            if(SR > 255 && SG > 255 && SB > 255)
+            if(SR > 255)
             {
                 int SR = 255;
+            }
+            if(SG > 255)
+            {
                 int SG = 255;
+            }
+            if(SB > 255)
+            {
                 int SB = 255;
             }
 
