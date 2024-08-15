@@ -99,9 +99,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int sumcornerlbblue = copy[height - 1][0].rgbtblue + copy[height - 2][0].rgbtblue + copy[height - 1][1].rgbtblue + copy[height - 2][1].rgbtblue;
             image[height - 1][0].rgbtblue = (sumcornerlbblue) / 4;
 
-            int sumcornerrtred = copy[0][width - 1].rgbtred + copy[0][width - 2].rgbtred + copy[1][width - 2].rgbtred + copy[1][width - 1].rgbtred;
+            int sumcornerrtred = c
             image[0][width - 1].rgbtred = (sumcornerrtred) / 4;
-            int sumcornerrtgreen = 
+            int sumcornerrtgreen =
 
             //edge, 6 values
 
