@@ -90,7 +90,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int sumcornergreen = copy[i][j].rgbtgreen + copy[i][j + 1].rgbtgreen + copy[i + 1][j].rgbtgreen + copy[i + 1][j + 1].rgbtgreen;
             int blurgreen = (sumcornergreen) / 4;
             int sumcornerblue = copy[i][j].rgbtblue + copy[i][j + 1].rgbtblue + copy[i + 1][j].rgbtblue + copy[i + 1][j + 1].rgbtblue;
-            int blurblue = (sumcornerblue) / 4;
+            image[i] blurblue = (sumcornerblue) / 4;
 
             //edge, 6 values
 
