@@ -85,6 +85,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             copy[i][j] = image[i][j];
             //corner, 4 values
+            
 
             //edge, 6 values
 
