@@ -86,13 +86,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             copy[i][j] = image[i][j];
             //corner, 4 values
             int sumcornerltred = copy[0][0].rgbtred + copy[0][1].rgbtred + copy[1][0].rgbtred + copy[1][1].rgbtred;
-            image[i][j].rgbtred = (sumcornerltred) / 4;
-            int sumcornerltgreen = copy[0][0].rgbtgreen + copy[i][j + 1].rgbtgreen + copy[i + 1][j].rgbtgreen + copy[i + 1][j + 1].rgbtgreen;
-            image[i][j].rgbtgreen = (sumcornerltgreen) / 4;
-            int sumcornerltblue = copy[i][j].rgbtblue + copy[i][j + 1].rgbtblue + copy[i + 1][j].rgbtblue + copy[i + 1][j + 1].rgbtblue;
-            image[i][j].rgbtblue = (sumcornerltblue) / 4;
+            image[0][0].rgbtred = (sumcornerltred) / 4;
+            int sumcornerltgreen = copy[0][0].rgbtgreen + copy[0][1].rgbtgreen + copy[1][0].rgbtgreen + copy[1][1].rgbtgreen;
+            image[0][0].rgbtgreen = (sumcornerltgreen) / 4;
+            int sumcornerltblue = copy[0][0].rgbtblue + copy[0][1].rgbtblue + copy[1][0].rgbtblue + copy[1][1].rgbtblue;
+            image[0][0].rgbtblue = (sumcornerltblue) / 4;
 
             int sumcornerlbred = copy[height - 1][0].rgbtred + copy[height - 2][0].rgbtred + copy[height - 1][1].rgbtred + copy[height - 2][1].rgbtred;
+            image[height - 1][0].rgbtred = (sumcornerlbred) / 4;
 
             //edge, 6 values
             int sumedgered = copy[i][j + 1].rgbtred +
