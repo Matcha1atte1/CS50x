@@ -116,7 +116,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             //edge, 6 values
             for(i = 1; i < width - 2; i++)
             {
-                
+                int sumedgetopred = copy[1]
 
 
 
