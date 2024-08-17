@@ -85,6 +85,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for(int j = 0; j < width; j++)
         {
             copy[i][j] = image[i][j];
+        }
+    }
+
+    for(int i = 0; i < height; i++)
+    {
+        for(int j = 0; j < width; j++)
+        {
             //corner, 4 values
             int sumcornerltred = copy[0][0].rgbtRed + copy[0][1].rgbtRed + copy[1][0].rgbtRed + copy[1][1].rgbtRed;
             image[0][0].rgbtRed = round((sumcornerltred) / 4.0);
