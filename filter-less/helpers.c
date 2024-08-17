@@ -113,112 +113,21 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[height - 1][width - 1].rgbtGreen = (sumcornerrbgreen) /4;
             int sumcornerrbblue = copy[height - 1][width - 1].rgbtBlue + copy[height - 1][width - 2].rgbtBlue + copy[height - 2][width - 2].rgbtBlue + copy[height - 2][width - 1].rgbtBlue;
             image[height - 1][width - 1].rgbtBlue = (sumcornerrbblue) /4;
+
+            //edge, 6 values
+
+            //top row
+            if(i == 0 && j >= 1 && j <= width - 2)
+            {
+                
+            }
+
         }
     }
 
             //edge, 6 values
 
-            //first row
-            for (int i = 0; i < height; i++)
-             {
-                for (int j = 0; j < width; j++)
-                {
-                copy[i][j] = image[i][j];
-                }
-             }
 
-            for(int j = 1; j < width - 1; j++)
-            {
-                int sumr = 0;
-                int sumg = 0;
-                int sumb = 0;
-                for(int i = 0; i <= 1; i++)
-                {
-                    for(int x = j - 1; x <= j + 1; x++)
-                    {
-                        if(x >= 0 && x < width)
-                        {
-                        sumr += copy[i][x].rgbtRed;
-                        sumg += copy[i][x].rgbtGreen;
-                        sumb += copy[i][x].rgbtBlue;
-                        }
-                    }
-                }
-
-                image[0][j].rgbtRed = sumr / 6;
-                image[0][j].rgbtGreen = sumg / 6;
-                image[0][j].rgbtBlue = sumb / 6;
-            }
-
-
-            //last row
-            for(int j = 1; j < width - 1; j++)
-            {
-                int sumr = 0;
-                int sumg = 0;
-                int sumb = 0;
-                for(int i = height - 2; i <= height - 1; i++)
-                {
-                    for(int x = j - 1; x <= j + 1; x++)
-                    {
-                        if(x >= 0 && x < width)
-                        {
-                        sumr += copy[i][x].rgbtRed;
-                        sumg += copy[i][x].rgbtGreen;
-                        sumb += copy[i][x].rgbtBlue;
-                        }
-                    }
-                }
-                image[height - 1][j].rgbtRed = sumr / 6;
-                image[height - 1][j].rgbtGreen = sumg / 6;
-                image[height - 1][j].rgbtBlue = sumb / 6;
-            }
-
-            //first column
-            for(int i = 1; i <= height - 2; i++)
-            {
-                int sumr = 0;
-                int sumg = 0;
-                int sumb = 0;
-                for(int j = 0; j <= 1; j++)
-                {
-                    for(int x = i - 1; x <= i + 1; x++)
-                    {
-                        if(x >= 0 && x < height)
-                        {
-                        sumr += copy[x][j].rgbtRed;
-                        sumg += copy[x][j].rgbtGreen;
-                        sumb += copy[x][j].rgbtBlue;
-                        }
-                    }
-                }
-                image[i][0].rgbtRed = sumr / 6;
-                image[i][0].rgbtGreen = sumg / 6;
-                image[i][0].rgbtBlue = sumb / 6;
-            }
-
-            //last column
-            for(int i = 1; i <= height - 2; i++)
-            {
-                int sumr = 0;
-                int sumg = 0;
-                int sumb = 0;
-                for(int j = width - 2; j <= width - 1; j++)
-                {
-                    for(int x = i - 1; x <= i + 1; x++)
-                    {
-                        if(x >= 0 && x < height)
-                        {
-                        sumr += copy[x][j].rgbtRed;
-                        sumg += copy[x][j].rgbtGreen;
-                        sumb += copy[x][j].rgbtBlue;
-                        }
-                    }
-                }
-                image[i][width - 1].rgbtRed = sumr / 6;
-                image[i][width - 1].rgbtGreen = sumg / 6;
-                image[i][width - 1].rgbtBlue = sumb / 6;
-            }
 
 
 
