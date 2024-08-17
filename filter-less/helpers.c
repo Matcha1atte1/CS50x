@@ -124,9 +124,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     for(j = i - 1; j <= i + 1; j++)
                     {
                         sum += copy[i][j];
-
                     }
                 }
+                image[i][j].rgbt
+            }
+            image[]
 
 
 
@@ -135,7 +137,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 
             //middle, 9 values
-        
+
     }
     return;
 }
