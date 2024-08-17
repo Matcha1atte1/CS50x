@@ -179,6 +179,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             //last column
             for(int i = 1; i <= height - 2; i++)
+            {
                 sumr = 0;
                 sumg = 0;
                 sumb = 0;
@@ -191,10 +192,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         sumb += copy[x][j].rgbtblue;
                     }
                 }
-                image[i][0].rgbtred = sumr / 6;
-                image[i][0].rgbtgreen = sumg / 6;
-                image[i][0].rgbtblue = sumb / 6;
-
+                image[i][width - 1].rgbtred = sumr / 6;
+                image[i][width - 1].rgbtgreen = sumg / 6;
+                image[i][width - 1].rgbtblue = sumb / 6;
+            }
 
 
 
