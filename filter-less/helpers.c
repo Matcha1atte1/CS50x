@@ -142,13 +142,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtGreen = round((copy[i][j].rgbtGreen + copy[i - 1][j].rgbtGreen + copy[i + 1][j].rgbtGreen + copy[i - 1][j + 1].rgbtGreen + copy[i][j + 1].rgbtGreen + copy[i + 1][j + 1].rgbtGreen) / 6.0);
                 image[i][j].rgbtBlue = round((copy[i][j].rgbtBlue + copy[i - 1][j].rgbtBlue + copy[i + 1][j].rgbtBlue + copy[i - 1][j + 1].rgbtBlue + copy[i][j + 1].rgbtBlue + copy[i + 1][j + 1].rgbtBlue) / 6.0);
             }
-        else if (w == 0 && h >= 1 && h <= height-2 )
-            {
-                image[h][w].rgbtRed = round((copy[h][w].rgbtRed + copy[h-1][w].rgbtRed + copy[h-1][w+1].rgbtRed + copy[h][w+1].rgbtRed + copy[h+1][w+1].rgbtRed + copy[h+1][w].rgbtRed) / 6.0);
-                image[h][w].rgbtGreen = round((copy[h][w].rgbtGreen + copy[h-1][w].rgbtGreen + copy[h-1][w+1].rgbtGreen + copy[h][w+1].rgbtGreen + copy[h+1][w+1].rgbtGreen + copy[h+1][w].rgbtGreen) / 6.0);
-                image[h][w].rgbtBlue = round((copy[h][w].rgbtBlue + copy[h-1][w].rgbtBlue + copy[h-1][w+1].rgbtBlue + copy[h][w+1].rgbtBlue + copy[h+1][w+1].rgbtBlue + copy[h+1][w].rgbtBlue) / 6.0);
-            }
-
 
             //right column
             else if(j == width - 1 && i >= 1 && i <= height - 2)
@@ -156,6 +149,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtRed = round((copy[i][j].rgbtRed + copy[i - 1][j].rgbtRed + copy[i + 1][j].rgbtRed + copy[i - 1][j - 1].rgbtRed + copy[i][j - 1].rgbtRed + copy[i + 1][j - 1].rgbtRed) / 6.0);
                 image[i][j].rgbtGreen = round((copy[i][j].rgbtGreen + copy[i - 1][j].rgbtGreen + copy[i + 1][j].rgbtGreen + copy[i - 1][j - 1].rgbtGreen + copy[i][j - 1].rgbtGreen + copy[i + 1][j - 1].rgbtGreen) / 6.0);
                 image[i][j].rgbtBlue = round((copy[i][j].rgbtBlue + copy[i - 1][j].rgbtBlue + copy[i + 1][j].rgbtBlue + copy[i - 1][j - 1].rgbtBlue + copy[i][j - 1].rgbtBlue + copy[i + 1][j - 1].rgbtBlue) / 6.0);
+            }
+
+            else if ( w == width - 2 && h >= 1 && h <= height-2)
+            {
+                image[h][w].rgbtRed = round((copy[h][w].rgbtRed + copy[h-1][w].rgbtRed + copy[h-1][w-1].rgbtRed + copy[h][w-1].rgbtRed + copy[h+1][w-1].rgbtRed + copy[h+1][w].rgbtRed) / 6.0);
+                image[h][w].rgbtGreen = round((copy[h][w].rgbtGreen + copy[h-1][w].rgbtGreen + copy[h-1][w-1].rgbtGreen + copy[h][w-1].rgbtGreen + copy[h+1][w-1].rgbtGreen + copy[h+1][w].rgbtGreen) / 6.0);
+                image[h][w].rgbtBlue = round((copy[h][w].rgbtBlue + copy[h-1][w].rgbtBlue + copy[h-1][w-1].rgbtBlue + copy[h][w-1].rgbtBlue + copy[h+1][w-1].rgbtBlue + copy[h+1][w].rgbtBlue) / 6.0);
             }
             }
             }
