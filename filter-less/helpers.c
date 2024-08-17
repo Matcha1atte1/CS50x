@@ -156,7 +156,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for(int x = j - 1; x <= j + 1; x++)
                     {
-                        copy[i][j] = image[i][j];
                         sumr += copy[i][x].rgbtRed;
                         sumg += copy[i][x].rgbtGreen;
                         sumb += copy[i][x].rgbtBlue;
@@ -177,7 +176,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for(int x = i - 1; x <= i + 1; x++)
                     {
-                        copy[i][j] = image[i][j];
                         sumr += copy[x][j].rgbtRed;
                         sumg += copy[x][j].rgbtGreen;
                         sumb += copy[x][j].rgbtBlue;
@@ -198,7 +196,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for(int x = i - 1; x <= i + 1; x++)
                     {
-                        copy[i][j] = image[i][j];
                         sumr += copy[x][j].rgbtRed;
                         sumg += copy[x][j].rgbtGreen;
                         sumb += copy[x][j].rgbtBlue;
