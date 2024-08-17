@@ -157,7 +157,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             //first column
-            for(int i = 1; i <= height - 2;i++)
+            for(int i = 1; i <= height - 2; i++)
             {
                 sumr = 0;
                 sumg = 0;
