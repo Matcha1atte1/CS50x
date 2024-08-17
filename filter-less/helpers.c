@@ -151,7 +151,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtBlue = round((copy[i][j].rgbtBlue + copy[i - 1][j].rgbtBlue + copy[i + 1][j].rgbtBlue + copy[i - 1][j - 1].rgbtBlue + copy[i][j - 1].rgbtBlue + copy[i + 1][j - 1].rgbtBlue) / 6.0);
             }
 
-            else if(i >)
+            else if(i >= 1 && i <= height - 2 && j >= 1 && j<= width - 2)
 
 
 
