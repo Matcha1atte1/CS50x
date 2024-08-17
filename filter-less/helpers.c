@@ -114,13 +114,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[height - 1][width - 1].rgbtblue = (sumcornerrbblue) /4;
 
             //edge, 6 values
+
+            //first row
             for(i = 1; i < width - 1; i++)
             {
                 for(for x = 0; x <= 1; x++)
                 {
                     for(j = i - 1; j <= i + 1; j++)
                     {
-                        
+
                     }
                 }
 
