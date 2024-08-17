@@ -117,8 +117,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
 
             //edge, 6 values
-            copy[i][j] = image[i][j];
+
             //first row
+            for (int i = 0; i < height; i++)
+             {
+                for (int j = 0; j < width; j++)
+                {
+                copy[i][j] = image[i][j];
+                }
+             }
+
             for(int j = 1; j < width - 1; j++)
             {
                 int sumr = 0;
