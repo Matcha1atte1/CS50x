@@ -123,12 +123,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtGreen = round((copy[i][j].rgbtGreen + copy[i][j - 1].rgbtGreen + copy[i][j + 1].rgbtGreen + copy[i + 1][j - 1].rgbtGreen + copy[i + 1][j].rgbtGreen + copy[i + 1][j + 1].rgbtGreen) / 6.0);
                 image[i][j].rgbtBlue = round((copy[i][j].rgbtBlue + copy[i][j - 1].rgbtBlue + copy[i][j + 1].rgbtBlue + copy[i + 1][j - 1].rgbtBlue + copy[i + 1][j].rgbtBlue + copy[i + 1][j + 1].rgbtBlue) / 6.0);
             }
-             else if (h == 0 && w >=1 && w <= width-2)
-            {
-                image[h][w].rgbtRed = round((copy[h][w].rgbtRed + copy[h][w-1].rgbtRed + copy[h+1][w-1].rgbtRed + copy[h+1][w].rgbtRed + copy[h+1][w+1].rgbtRed + copy[h][w+1].rgbtRed) / 6.0);
-                image[h][w].rgbtGreen = round((copy[h][w].rgbtGreen + copy[h][w-1].rgbtGreen + copy[h+1][w-1].rgbtGreen + copy[h+1][w].rgbtGreen + copy[h+1][w+1].rgbtGreen + copy[h][w+1].rgbtGreen) / 6.0);
-                image[h][w].rgbtBlue = round((copy[h][w].rgbtBlue + copy[h][w-1].rgbtBlue + copy[h+1][w-1].rgbtBlue + copy[h+1][w].rgbtBlue + copy[h+1][w+1].rgbtBlue + copy[h][w+1].rgbtBlue) / 6.0);
-            }
+
+
 
             //bottom row
             else if(i == height - 1 && j >= 1 && j <= width - 2)
@@ -137,6 +133,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtGreen = round((copy[i][j].rgbtGreen + copy[i][j - 1].rgbtGreen + copy[i][j + 1].rgbtGreen + copy[i - 1][j - 1].rgbtGreen + copy[i - 1][j].rgbtGreen + copy[i - 1][j + 1].rgbtGreen) / 6.0);
                 image[i][j].rgbtBlue = round((copy[i][j].rgbtBlue + copy[i][j - 1].rgbtBlue + copy[i][j + 1].rgbtBlue + copy[i - 1][j - 1].rgbtBlue + copy[i - 1][j].rgbtBlue + copy[i - 1][j + 1].rgbtBlue) / 6.0);
             }
+             else if ( h == height -2 && w >=1 && w <= width-2)
+            {
+                image[h][w].rgbtRed = round((copy[h][w].rgbtRed + copy[h][w-1].rgbtRed + copy[h-1][w-1].rgbtRed + copy[h-1][w].rgbtRed + copy[h-1][w+1].rgbtRed + copy[h][w+1].rgbtRed) / 6.0);
+                image[h][w].rgbtGreen = round((copy[h][w].rgbtGreen + copy[h][w-1].rgbtGreen + copy[h-1][w-1].rgbtGreen + copy[h-1][w].rgbtGreen + copy[h-1][w+1].rgbtGreen + copy[h][w+1].rgbtGreen) / 6.0);
+                image[h][w].rgbtBlue = round((copy[h][w].rgbtBlue + copy[h][w-1].rgbtBlue + copy[h-1][w-1].rgbtBlue + copy[h-1][w].rgbtBlue + copy[h-1][w+1].rgbtBlue + copy[h][w+1].rgbtBlue) / 6.0);
+            }
+
 
             //left column
             else if(j == 0 && i >= 1 && i <= height - 2)
