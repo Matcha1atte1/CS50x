@@ -119,7 +119,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             //top row
             if(i == 0 && j >= 1 && j <= width - 2)
             {
-                
+                image[i][j].rgbtRed = round(copy[i][j].rgbtRed + copy[i][j - 1].rgbtRed + copy[i][j + 1].rgbtRed + copy[1][])
             }
 
         }
