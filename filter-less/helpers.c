@@ -9,12 +9,12 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         for(int j = 0; j < width; j++)
         {
         //take average of red, green and blue
-        float average = (image[i][j].rgbtred + image[i][j].rgbtgreen + image[i][j].rgbtblue) / 3.0;
+        float average = (image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3.0;
         int rounded = round(average);
         //Update pixel values
-        image[i][j].rgbtred = rounded;
-        image[i][j].rgbtgreen = rounded;
-        image[i][j].rgbtblue = rounded;
+        image[i][j].rgbtRed = rounded;
+        image[i][j].rgbtGreen = rounded;
+        image[i][j].rgbtBlue = rounded;
         }
     }
     return;
@@ -50,7 +50,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             }
 
             //Update pixel with sepia values
-            image[i][j].rgbtred = SR;
+            image[i][j].rgbtRed = SR;
             image[i][j].rgbtgreen = SG;
             image[i][j].rgbtblue = SB;
         }
