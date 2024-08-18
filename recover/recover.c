@@ -14,6 +14,11 @@ int main(int argc, char *argv[])
     FILE *card = fopen(argv[1], "r");
 
     // check file was opened properly
-    
+    if(card == NULL)
+    {
+        printf("File cannot be opened\n");
+        return 1;
+    }
+
 
 }
