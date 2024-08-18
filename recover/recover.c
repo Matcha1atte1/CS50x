@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
                 char *jpeg0 = malloc(8);
                 sprintf(jpeg0, "%03i.jpg", 0);
                 FILE *output = fopen(jpeg0, "w");
-                fwrite(jpeg0, 1, 512, output);
+                fwrite(jpeg0, 1, 8, output);
             }
 
             // else if already found a jpeg
