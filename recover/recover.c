@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     while (fread(buffer, 1, 512, card) == 512)
     {
         // check if it is a jpeg header (start of a jpeg)
-        if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] && 0xf0) == 0xe0)
+        if(buffer[0] == 0xff & buffer[1] == 0xd8 & buffer[2] == 0xff & (buffer[3] & 0xf0) == 0xe0)
         {
             // create JPEGs from the data
 
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
             if(count == 0)
             {
                 sprintf(filename, "%03i.jpg", 0);
-                FILE *currentfile = fopen(filename, "w");
+                currentfile = fopen(filename, "w");
                 count++;
             }
             // else if already found a jpeg
@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
             fwrite(buffer, sizeof(uint8_t), 512, currentfile);
         }
     }
-
-    free(filename);
+    fclose(card);
     fclose(currentfile);
+    free(filename);
 }
