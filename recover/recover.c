@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
             {
                 fclose(currentfile);
                 sprintf(filename, "%03i.jpg", count);
-                FILE *currentfile = fopen(filename, "w");
+                currentfile = fopen(filename, "w");
                 count++;
             }
         }
