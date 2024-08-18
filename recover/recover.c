@@ -35,9 +35,9 @@ int main(int argc, char *argv[])
             // check if it is the first jpeg found
             if(count == 1)
             {
-                char *string = malloc(8);
-                sprintf(string, "%03i.jpg", 0);
-                FILE *output = fopen(string, "w");
+                char *jpeg0 = malloc(8);
+                sprintf(jpeg0, "%03i.jpg", 0);
+                FILE *output = fopen(jpeg0, "w");
                 fwrite(string, 1, 8, output);
             }
 
