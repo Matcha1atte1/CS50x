@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     while (fread(buffer, 1, 512, card) == 512)
     {
         int count = 0;
-        // check if it is a jpeg header
+        // check if it is a jpeg header (start of a jpeg)
         if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] && 0xf0) == 0xe0)
         {
             count++;
@@ -40,6 +40,9 @@ int main(int argc, char *argv[])
                 FILE *currentfile = fopen(filename, "w");
             }
             else
+            {
+                fclose()
+            }
 
             // else if already found a jpeg
         }
