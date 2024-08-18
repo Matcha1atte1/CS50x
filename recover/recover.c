@@ -1,11 +1,11 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 
 int main(int argc, char *argv[])
 {
     // accept a single command-line argument
-    if(argc != 2)
+    if (argc != 2)
     {
         printf("Usage: ./recover FILE\n");
         return 1;
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     FILE *card = fopen(argv[1], "r");
 
     // check file was opened properly
-    if(card == NULL)
+    if (card == NULL)
     {
         printf("File cannot be opened\n");
         return 1;
@@ -37,12 +37,12 @@ int main(int argc, char *argv[])
     while (fread(buffer, 1, 512, card) == 512)
     {
         // check if it is a jpeg header (start of a jpeg)
-        if(buffer[0] == 0xff & buffer[1] == 0xd8 & buffer[2] == 0xff & (buffer[3] & 0xf0) == 0xe0)
+        if (buffer[0] == 0xff & buffer[1] == 0xd8 & buffer[2] == 0xff & (buffer[3] & 0xf0) == 0xe0)
         {
             // create JPEGs from the data
 
             // check if it is the first jpeg found
-            if(count == 0)
+            if (count == 0)
             {
                 sprintf(filename, "%03i.jpg", 0);
                 currentfile = fopen(filename, "w");
@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
                 count++;
             }
         }
-        if(currentfile != NULL)
+        if (currentfile != NULL)
         {
             fwrite(buffer, sizeof(uint8_t), 512, currentfile);
         }
