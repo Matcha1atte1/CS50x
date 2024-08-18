@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     // set jpeg counter
     int count = 0;
 
-    // set currenfile
+    // set currentfile
     FILE *currentfile = NULL;
 
     // allocate memory for filename
