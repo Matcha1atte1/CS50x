@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", 0);
                 FILE *currentfile = fopen(filename, "w");
             }
+            else
 
             // else if already found a jpeg
         }
