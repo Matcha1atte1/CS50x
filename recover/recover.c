@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
                 char *string = malloc(8);
                 sprintf(string, "%03i.jpg", 0);
                 FILE *output = fopen(string, "w");
+                fwrite(string, 1, 8, output);
             }
 
             // else if already found a jpeg
