@@ -35,8 +35,10 @@ int main(int argc, char *argv[])
             // check if it is the first jpeg found
             if(count == 1)
             {
-                
+
             }
+
+            // else if already found a jpeg
         }
         // create JPEGs from the data
 
