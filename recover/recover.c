@@ -24,5 +24,8 @@ int main(int argc, char *argv[])
     // Create a buffer for a block of data
     uint8_t buffer[512];
 
+    // while there is still data left to read from the memory card
+    
+
 
 }
