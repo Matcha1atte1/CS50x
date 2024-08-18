@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
             // check if it is the first jpeg found
             if(count == 1)
             {
-                char *jpeg0 = malloc(8);
+                char * = malloc(8);
                 sprintf(jpeg0, "%03i.jpg", 0);
                 FILE *output = fopen(jpeg0, "w");
                 fread(card, 1, 8, jpeg0);
