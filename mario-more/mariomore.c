@@ -9,7 +9,7 @@ int main(void)
     }
     while (height < 1 || height > 8);
 
-    for (row = 0; row < height; row++)
+    for (row = 0; row <= height - 1; row++)
     {
         for (space = 0; space < height - row - 1; space++)
         {
