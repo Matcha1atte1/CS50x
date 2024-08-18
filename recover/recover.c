@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 int main(int argc, char *argv[])
 {
@@ -19,6 +20,9 @@ int main(int argc, char *argv[])
         printf("File cannot be opened\n");
         return 1;
     }
+
+    // Create a buffer for a block of data
+    uint8_t buffer[512];
 
 
 }
