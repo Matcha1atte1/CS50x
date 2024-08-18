@@ -35,8 +35,9 @@ int main(int argc, char *argv[])
             // check if it is the first jpeg found
             if(count == 1)
             {
-                char *string = malloc(8);
-                sprintf(string, "%03i.jpg", 0);
+                char *output = malloc(8);
+                sprintf(output, "%03i.jpg", 0);
+                
             }
 
             // else if already found a jpeg
