@@ -12,4 +12,11 @@ int main(void)
     list[0] = 1;
     list[1] = 2;
     list[2] = 3;
+
+    int *tmp = malloc(4 * sizeof(int));
+    if(tmp == NULL)
+    {
+        
+        return 1;
+    }
 }
