@@ -21,6 +21,9 @@ int main(int argc, char *argv[])
             return 1;
         }
         n->number = number;
+        n->next = NULL;
+
+        list = n
 
     }
 
