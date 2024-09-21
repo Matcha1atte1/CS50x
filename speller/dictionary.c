@@ -54,8 +54,7 @@ unsigned int hash(const char *word)
     {
         return 0;
     }
-    // set bucket size
-    int N = 50;
+
     // get the first two letters
     char first = tolower(word[0]);
     char second = tolower(word[1]);
@@ -81,7 +80,7 @@ bool load(const char *dictionary)
 
     for(int i = 0; i < N; i++)
     {
-        hashtable->table[i] = NULL;
+        table[i] = NULL;
     }
 
     // read each word in the file
@@ -102,8 +101,8 @@ bool load(const char *dictionary)
             unsigned int index = hash(word);
 
             // insert node into hash table
-            n->next = hashtable->table[index];
-            hashtable->table[index] = n;
+            n->next = table[index];
+            table[index] = n;
     }
 
     // close the dictionary file
