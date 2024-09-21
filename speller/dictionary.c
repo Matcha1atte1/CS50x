@@ -119,6 +119,7 @@ unsigned int size(void)
         return 0;
     }
 
+    const char *dictionary;
     char word[LENGTH];
     unsigned int word_count = 0;
     while(fscanf(source, "%s", word) == 1)
