@@ -12,7 +12,8 @@
 // Prototypes
 bool check(const char *word);
 {
-    
+    // hash word to obtain hash value
+    unsigned int index = hash(word);
 }
 unsigned int hash(const char *word);
 {
