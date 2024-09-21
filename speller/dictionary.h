@@ -28,6 +28,7 @@ bool load(const char *dictionary);
 
 
     // add each word to the hash table
+    node *n = malloc(sizeof(node));
 
     // close the dictionary file
     fclose(source);
