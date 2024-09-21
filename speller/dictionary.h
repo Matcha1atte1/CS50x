@@ -73,6 +73,9 @@ bool load(const char *dictionary);
     return true;
 }
 unsigned int size(void);
+{
+    
+}
 bool unload(void);
 
 #endif // DICTIONARY_H
