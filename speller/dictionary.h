@@ -114,5 +114,8 @@ unsigned int size(void);
     return word_count;
 }
 bool unload(void);
+{
+    
+}
 
 #endif // DICTIONARY_H
