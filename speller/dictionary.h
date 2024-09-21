@@ -40,7 +40,7 @@ bool load(const char *dictionary);
             unsigned int index = hash(word);
 
             n->next = hashtable->table[index];
-            
+            hashtable->table[index] = n;
 
     }
 
