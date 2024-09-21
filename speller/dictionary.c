@@ -107,12 +107,6 @@ bool load(const char *dictionary)
     // close the dictionary file
     fclose(source);
     return true;
-
-    // close the dictionary file
-    else
-    {
-        return false;
-    }
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
