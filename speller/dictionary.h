@@ -43,7 +43,6 @@ bool load(const char *dictionary);
             // insert node into hash table
             n->next = hashtable->table[index];
             hashtable->table[index] = n;
-            free(n);
     }
 
     // close the dictionary file
