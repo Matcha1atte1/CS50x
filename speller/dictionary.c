@@ -123,7 +123,7 @@ unsigned int size(void)
         return 0;
     }
 
-    char word[LENGTH];
+    char word[LENGTH + 1];
     unsigned int word_count = 0;
     while(fscanf(source, "%s", word) == 1)
     {
