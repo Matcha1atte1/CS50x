@@ -17,7 +17,11 @@ bool load(const char *dictionary);
     // open the dictionary file
     FILE *source = fopen(dictionary, "r");
 
-    if(fopen == NULL)
+    if(source == NULL)
+    {
+        printf("File could not be opened\n");
+        return 1;
+    }
 
     // read each word in the file
 
@@ -25,6 +29,7 @@ bool load(const char *dictionary);
     // add each word to the hash table
 
     // close the dictionary file
+    fclose(source);
 }
 unsigned int size(void);
 bool unload(void);
