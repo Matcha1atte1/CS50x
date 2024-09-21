@@ -26,12 +26,12 @@ bool load(const char *dictionary);
     // read each word in the file
     while(fscanf(file, "%s", word) == 1)
     {
-        
+         // add each word to the hash table
+            node *n = malloc(sizeof(node));
+
     }
 
 
-    // add each word to the hash table
-    node *n = malloc(sizeof(node));
 
     // close the dictionary file
     fclose(source);
