@@ -24,6 +24,7 @@ bool load(const char *dictionary);
     }
 
     // read each word in the file
+    char word[LENGTH];
     while(fscanf(source, "%s", word) == 1)
     {
          // add each word to the hash table
@@ -44,13 +45,11 @@ bool load(const char *dictionary);
             hashtable->table[index] = n;
     }
 
-
-
     // close the dictionary file
     fclose(source);
 
     // free memory
-    free
+    free(n);
 
     return true;
 }
