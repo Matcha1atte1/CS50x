@@ -49,6 +49,9 @@ bool load(const char *dictionary);
     // close the dictionary file
     fclose(source);
 
+    // free memory
+    free
+
     return true;
 }
 unsigned int size(void);
