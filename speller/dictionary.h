@@ -82,6 +82,26 @@ unsigned int size(void);
         return false;
     }
 
+    char word[LENGTH];
+    while(fscanf(source, "%s", word) == 1)
+    {
+         // add each word to the hash table
+            node *n = malloc(sizeof(node));
+
+            if(n == NULL)
+            {
+                return false;
+            }
+
+            strcpy(n->word, word);
+
+            // call the hash function
+            unsigned int index = hash(word);
+
+            // insert node into hash table
+            n->next = hashtable->table[index];
+            hashtable->table[index] = n;
+
 }
 bool unload(void);
 
