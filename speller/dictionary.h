@@ -24,6 +24,7 @@ bool load(const char *dictionary);
     }
 
     // read each word in the file
+    for()
 
 
     // add each word to the hash table
