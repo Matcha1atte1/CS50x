@@ -23,7 +23,10 @@ bool load(const char *dictionary);
         return false;
     }
 
-    
+    for(int i = 0; i < N; i++)
+    {
+        hashtable->table[i] = NULL;
+    }
 
     // read each word in the file
     char word[LENGTH];
