@@ -36,7 +36,10 @@ bool load(const char *dictionary);
 
             strcpy(n->word, word);
 
-            hash
+            // call the hash function
+            unsigned int index = hash(word);
+
+            
 
     }
 
