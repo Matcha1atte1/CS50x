@@ -14,6 +14,10 @@ bool check(const char *word);
 {
     // hash word to obtain hash value
     unsigned int index = hash(word);
+
+    // access linked list at that index in the hash table
+    
+
 }
 unsigned int hash(const char *word);
 {
