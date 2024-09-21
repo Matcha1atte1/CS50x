@@ -113,13 +113,13 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    const char *dictionary;
     FILE *source = fopen(dictionary, "r");
     if(source == NULL)
     {
         return 0;
     }
 
-    const char *dictionary;
     char word[LENGTH];
     unsigned int word_count = 0;
     while(fscanf(source, "%s", word) == 1)
