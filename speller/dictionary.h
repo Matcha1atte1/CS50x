@@ -13,7 +13,12 @@
 bool check(const char *word);
 unsigned int hash(const char *word);
 {
-    
+    // get the first two letters
+    char first = word[0];
+    char second = word[1];
+
+    // compute index using ascii
+    unsigned int index = 
 }
 bool load(const char *dictionary);
 {
