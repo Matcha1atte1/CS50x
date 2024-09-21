@@ -24,7 +24,7 @@ bool load(const char *dictionary);
     }
 
     // read each word in the file
-    while(fscanf(file, "%s", word) == 1)
+    while(fscanf(source, "%s", word) == 1)
     {
          // add each word to the hash table
             node *n = malloc(sizeof(node));
@@ -39,16 +39,17 @@ bool load(const char *dictionary);
             // call the hash function
             unsigned int index = hash(word);
 
-            // insert node into hash table 
+            // insert node into hash table
             n->next = hashtable->table[index];
             hashtable->table[index] = n;
-
     }
 
 
 
     // close the dictionary file
     fclose(source);
+
+    return true;
 }
 unsigned int size(void);
 bool unload(void);
