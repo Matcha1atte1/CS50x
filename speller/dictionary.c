@@ -115,6 +115,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    const char* dictionary;
     FILE *source = fopen(dictionary, "r");
     char word[LENGTH];
     unsigned int word_count = 0;
@@ -129,8 +130,8 @@ unsigned int size(void)
             unsigned int index = hash(word);
 
             // insert node into hash table
-            n->next = hashtable->table[index];
-            hashtable->table[index] = n;
+            n->next = table[index];
+            table[index] = n;
             word_count ++;
     }
     fclose(source);
@@ -144,7 +145,7 @@ bool unload(void)
     // iterate through every bucket in the hash table
     for(int i = 0; i < N; i++)
     {
-        node *cursor = hashtable->table[i];
+        node *cursor = table[i];
         while(cursor != 0)
         {
             node *tmp = cursor;
