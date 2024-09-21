@@ -23,6 +23,8 @@ bool load(const char *dictionary);
         return false;
     }
 
+    
+
     // read each word in the file
     char word[LENGTH];
     while(fscanf(source, "%s", word) == 1)
