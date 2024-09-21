@@ -39,6 +39,7 @@ bool load(const char *dictionary);
             // call the hash function
             unsigned int index = hash(word);
 
+            // insert node into hash table 
             n->next = hashtable->table[index];
             hashtable->table[index] = n;
 
