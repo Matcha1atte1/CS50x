@@ -18,7 +18,15 @@ bool check(const char *word);
     // access linked list at that index in the hash table
     node *head = hashtable->table[index];
 
-    // traverse the linked list 
+    // traverse the linked list
+    while(head != NULL)
+    {
+        if(strcasecmp(head->word, word) == 0)
+        {
+            return true;
+        }
+        head = head->next;
+    }
 
 }
 unsigned int hash(const char *word);
