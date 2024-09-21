@@ -4,8 +4,8 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 #include <strings.h>
 
 #include "dictionary.h"
@@ -35,9 +35,9 @@ bool check(const char *word)
     node *head = table[index];
 
     // traverse the linked list
-    while(head != NULL)
+    while (head != NULL)
     {
-        if(strcasecmp(head->word, word) == 0)
+        if (strcasecmp(head->word, word) == 0)
         {
             return true;
         }
@@ -52,7 +52,7 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     // check for correct word
-    if(word == NULL || strlen(word) < 2)
+    if (word == NULL || strlen(word) < 2)
     {
         return 0;
     }
@@ -62,7 +62,7 @@ unsigned int hash(const char *word)
     char second = tolower(word[1]);
 
     // compute index using ascii
-    unsigned int index = ((first - 'a')*26 + (second - 'a')) % N;
+    unsigned int index = ((first - 'a') * 26 + (second - 'a')) % N;
 
     return index;
 }
@@ -74,39 +74,39 @@ bool load(const char *dictionary)
     // open the dictionary file
     FILE *source = fopen(dictionary, "r");
 
-    if(source == NULL)
+    if (source == NULL)
     {
         printf("File could not be opened\n");
         return false;
     }
 
-    for(int i = 0; i < N; i++)
+    for (int i = 0; i < N; i++)
     {
         table[i] = NULL;
     }
 
     // read each word in the file
     char word[LENGTH + 1];
-    while(fscanf(source, "%s", word) == 1)
+    while (fscanf(source, "%s", word) == 1)
     {
-         // add each word to the hash table
-            node *n = malloc(sizeof(node));
+        // add each word to the hash table
+        node *n = malloc(sizeof(node));
 
-            if(n == NULL)
-            {
-                fclose(source);
-                return false;
-            }
+        if (n == NULL)
+        {
+            fclose(source);
+            return false;
+        }
 
-            strcpy(n->word, word);
+        strcpy(n->word, word);
 
-            // call the hash function
-            unsigned int index = hash(word);
+        // call the hash function
+        unsigned int index = hash(word);
 
-            // insert node into hash table
-            n->next = table[index];
-            table[index] = n;
-            word_count++;
+        // insert node into hash table
+        n->next = table[index];
+        table[index] = n;
+        word_count++;
     }
     // close the dictionary file
     fclose(source);
@@ -124,10 +124,10 @@ bool unload(void)
 {
     // TODO
     // iterate through every bucket in the hash table
-    for(int i = 0; i < N; i++)
+    for (int i = 0; i < N; i++)
     {
         node *cursor = table[i];
-        while(cursor != 0)
+        while (cursor != 0)
         {
             node *tmp = cursor;
             cursor = cursor->next;
@@ -136,4 +136,3 @@ bool unload(void)
     }
     return true;
 }
-
