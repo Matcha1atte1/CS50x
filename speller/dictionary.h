@@ -18,7 +18,7 @@ unsigned int hash(const char *word);
     char second = word[1];
 
     // compute index using ascii
-    unsigned int index = 
+    unsigned int index = (first - 'a')
 }
 bool load(const char *dictionary);
 {
