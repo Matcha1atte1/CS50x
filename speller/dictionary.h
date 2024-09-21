@@ -39,7 +39,7 @@ bool load(const char *dictionary);
             // call the hash function
             unsigned int index = hash(word);
 
-            
+            n->next = 
 
     }
 
