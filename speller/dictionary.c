@@ -92,6 +92,7 @@ bool load(const char *dictionary)
 
             if(n == NULL)
             {
+                fclose(source);
                 return false;
             }
 
