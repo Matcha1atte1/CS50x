@@ -76,13 +76,8 @@ unsigned int size(void);
 {
     FILE *source = fopen(dictionary, "r");
 
-    if(source == NULL)
-    {
-        printf("File could not be opened\n");
-        return false;
-    }
-
     char word[LENGTH];
+    word_count = 0;
     while(fscanf(source, "%s", word) == 1)
     {
          // add each word to the hash table
@@ -101,7 +96,10 @@ unsigned int size(void);
             // insert node into hash table
             n->next = hashtable->table[index];
             hashtable->table[index] = n;
-
+            word_count ++;
+    }
+    return word_count;
+    fclose(source);
 }
 bool unload(void);
 
