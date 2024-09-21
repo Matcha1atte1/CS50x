@@ -110,26 +110,24 @@ bool load(const char *dictionary)
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
-unsigned int size(void)
+unsigned int size(const char *dictionary)
 {
     // TODO
-    const char* dictionary;
     FILE *source = fopen(dictionary, "r");
+    if(source == NULL)
+    {
+        return 0;
+    }
+
     char word[LENGTH];
     unsigned int word_count = 0;
     while(fscanf(source, "%s", word) == 1)
     {
-            // call the hash function
-            unsigned int index = hash(word);
-
-            // insert node into hash table
-            n->next = table[index];
-            table[index] = n;
             word_count ++;
-            return word_count;
     }
+
     fclose(source);
-    return 0;
+    return word_count;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
@@ -148,5 +146,5 @@ bool unload(void)
         }
         return true;
     }
-    return false;
+
 }
