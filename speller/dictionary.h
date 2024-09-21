@@ -115,7 +115,18 @@ unsigned int size(void);
 }
 bool unload(void);
 {
-    
+    // iterate through every bucket in the hash table
+    for(int i = 0; i < N; i++)
+    {
+        node *cursor = hashtable->table[i];
+        while(cursor != 0)
+        {
+            node *tmp = cursor;
+            cursor = cursor->next;
+            free(tmp);
+        }
+    }
+    return true;
 }
 
 #endif // DICTIONARY_H
