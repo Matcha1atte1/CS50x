@@ -11,6 +11,9 @@
 
 // Prototypes
 bool check(const char *word);
+{
+    
+}
 unsigned int hash(const char *word);
 {
     // check for correct word
