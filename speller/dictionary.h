@@ -34,10 +34,7 @@ bool load(const char *dictionary);
                 return false;
             }
 
-            else
-            {
-                strcpy(n->word, word)
-            }
+            strcpy(n->word, word);
 
             hash
 
