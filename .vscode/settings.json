@@ -7,5 +7,6 @@
         "type_traits": "c",
         "utility": "c",
         "string.h": "c"
-    }
+    },
+    "workbench.iconTheme": "vs-minimal"
 }
