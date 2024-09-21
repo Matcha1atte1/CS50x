@@ -113,6 +113,13 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
+    // TODO
+    FILE *source = fopen(dictionary, "r");
+    if(source == NULL)
+    {
+        return 0;
+    }
+
     char word[LENGTH + 1];
     unsigned int word_count = 0;
     while(fscanf(source, "%s", word) == 1)
