@@ -13,14 +13,19 @@
 bool check(const char *word);
 unsigned int hash(const char *word);
 {
+    // check for correct word
+    if(word == NULL || strlen(word) < 2)
+    {
+        return 0;
+    }
     // set bucket size
     int N = 50;
     // get the first two letters
-    char first = word[0];
-    char second = word[1];
+    char first = tolower(word[0]);
+    char second = tolower(word[1]);
 
     // compute index using ascii
-    unsigned int index = ((first - 'a')*26 + (second - 'a')) % N
+    unsigned int index = ((first - 'a')*26 + (second - 'a')) % N;
 
     return index;
 }
