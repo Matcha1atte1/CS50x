@@ -75,18 +75,12 @@ bool load(const char *dictionary);
 unsigned int size(void);
 {
     FILE *source = fopen(dictionary, "r");
-
     char word[LENGTH];
-    word_count = 0;
+    unsigned int word_count = 0;
     while(fscanf(source, "%s", word) == 1)
     {
          // add each word to the hash table
             node *n = malloc(sizeof(node));
-
-            if(n == NULL)
-            {
-                return false;
-            }
 
             strcpy(n->word, word);
 
@@ -98,8 +92,8 @@ unsigned int size(void);
             hashtable->table[index] = n;
             word_count ++;
     }
-    return word_count;
     fclose(source);
+    return word_count;
 }
 bool unload(void);
 
