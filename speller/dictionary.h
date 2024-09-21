@@ -74,7 +74,14 @@ bool load(const char *dictionary);
 }
 unsigned int size(void);
 {
-    
+    FILE *source = fopen(dictionary, "r");
+
+    if(source == NULL)
+    {
+        printf("File could not be opened\n");
+        return false;
+    }
+
 }
 bool unload(void);
 
