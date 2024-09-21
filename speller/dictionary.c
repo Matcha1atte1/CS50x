@@ -23,6 +23,9 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
+// global variable
+const char *dictionary;
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -114,7 +117,6 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    const char *dictionary;
     FILE *source = fopen(dictionary, "r");
     if(source == NULL)
     {
