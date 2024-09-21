@@ -20,7 +20,7 @@ bool load(const char *dictionary);
     if(source == NULL)
     {
         printf("File could not be opened\n");
-        return 1;
+        return false;
     }
 
     // read each word in the file
@@ -29,7 +29,10 @@ bool load(const char *dictionary);
          // add each word to the hash table
             node *n = malloc(sizeof(node));
 
-            if()
+            if(n == NULL)
+            {
+                return false;
+            }
 
     }
 
