@@ -25,7 +25,7 @@ bool check(const char *word)
     unsigned int index = hash(word);
 
     // access linked list at that index in the hash table
-    node *head = hashtable->table[index];
+    node *head = table[index];
 
     // traverse the linked list
     while(head != NULL)
