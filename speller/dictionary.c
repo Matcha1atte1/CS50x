@@ -119,11 +119,6 @@ unsigned int size(void)
     unsigned int word_count = 0;
     while(fscanf(source, "%s", word) == 1)
     {
-         // add each word to the hash table
-            node *n = malloc(sizeof(node));
-
-            strcpy(n->word, word);
-
             // call the hash function
             unsigned int index = hash(word);
 
