@@ -104,11 +104,12 @@ bool load(const char *dictionary)
             n->next = table[index];
             table[index] = n;
     }
+    return true;
 
     // close the dictionary file
     fclose(source);
 
-    return true;
+    return false;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
@@ -133,9 +134,10 @@ unsigned int size(void)
             n->next = table[index];
             table[index] = n;
             word_count ++;
+            return word_count;
     }
     fclose(source);
-    return word_count;
+    return 0;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
@@ -152,6 +154,7 @@ bool unload(void)
             cursor = cursor->next;
             free(tmp);
         }
+        return true;
     }
-    return true;
+    return false;
 }
