@@ -27,7 +27,7 @@ bool check(const char *word);
         }
         head = head->next;
     }
-
+    return false;
 }
 unsigned int hash(const char *word);
 {
