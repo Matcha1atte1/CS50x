@@ -42,9 +42,10 @@ from cs50 import get_float
 
 def main():
     while True:
-        dollars = get_float("Change owed: ")
         try:
             dollars = get_float("Change owed: ")
+            if dollars >= 0:
+                break
         except ValueError:
             pass
     quarters = calculate_quarters(dollars)
