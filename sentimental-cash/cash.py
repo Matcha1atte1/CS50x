@@ -37,10 +37,14 @@ def calculate_pennies(dollars):
         dollars -= 0.01
     return pennies
 
-
+from cs50 import get_float
 def main():
-    while cents < 0:
+    while dollars < 0:
         try:
-            
+            dollars = get_float("Change owed: ")
+        except ValueError:
+            pass
+
+
 
 
