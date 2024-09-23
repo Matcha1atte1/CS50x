@@ -18,11 +18,11 @@ def calculate_dimes(cents):
     return dimes
 
 
-def calculate_nickels(cents): 
+def calculate_nickels(cents):
     nickels = 0
     if cents < 5:
         return nickels
-    while cents > 5:
+    while cents >= 5:
         nickels += 1
         cents -= 5
     return nickels
@@ -32,7 +32,7 @@ def calculate_pennies(cents):
     pennies = 0
     if cents < 1:
         return pennies
-    while cents > 1:
+    while cents >= 1:
         pennies += 1
         cents -= 1
     return pennies
