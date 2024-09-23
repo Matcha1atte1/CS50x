@@ -39,6 +39,8 @@ def calculate_pennies(dollars):
 
 
 def main():
-    
+    while cents < 0:
+        try:
+            
 
 
