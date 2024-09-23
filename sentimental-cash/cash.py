@@ -37,7 +37,9 @@ def calculate_pennies(dollars):
         dollars -= 0.01
     return pennies
 
+
 from cs50 import get_float
+
 def main():
     while dollars < 0:
         try:
@@ -45,6 +47,22 @@ def main():
         except ValueError:
             pass
     quarters = calculate_quarters(dollars)
+    dollars = dollars - (quarters * 0.25)
+
+    dimes = calculate_dimes(dollars)
+    dollars = dollars - (dimes * 0.10)
+
+    nickels = calculate_nickels(dollars)
+    dollars = dollars - (nickels * 0.05)
+
+    pennies = calculate_pennies(dollars)
+    dollars = dollars - (pennies * 0.01)
+
+    coins = quarters + dimes + nickels + pennies
+
+    print(coins)
+
+main()
 
 
 
