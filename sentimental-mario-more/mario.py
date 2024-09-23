@@ -7,5 +7,8 @@ for row in range(height)
     for space in range(height - row)
         print(" ")
     for column in range(row + 1)
+        print("#")
+    print("  ")
+    for 
 
 
