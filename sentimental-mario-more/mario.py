@@ -1,10 +1,10 @@
 while True:
         try:
             height = int(input("Height: "))
+            if 1 <= height <= 8:
+                break
         except ValueError:
-
-         if 1 <= height <= 8:
-            break
+            pass
 
 for row in range(height):
     for space in range(height - row - 1):
