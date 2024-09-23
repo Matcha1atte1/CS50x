@@ -5,12 +5,12 @@ while True:
 
 for row in range(height):
     for space in range(height - row):
-        print(" ", end="")
+        print(" ",end="")
     for column in range(row + 1):
-        print("#", end="")
-    print("  ", end="")
+        print("#",end="")
+    print("  ",end="")
     for column in range(row + 1):
-        print("#", end="")
+        print("#",end="")
     print()
 
 
