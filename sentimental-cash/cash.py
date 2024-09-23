@@ -1,4 +1,4 @@
-def calculate_quarters(dollars)
+def calculate_quarters(dollars):
     quarters = 0
     while True:
         quarters += 1
