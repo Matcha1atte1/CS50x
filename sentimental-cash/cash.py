@@ -44,6 +44,8 @@ def main():
             dollars = get_float("Change owed: ")
         except ValueError:
             pass
+    quarters = calculate_quarters(dollars)
+
 
 
 
