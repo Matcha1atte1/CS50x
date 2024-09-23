@@ -4,6 +4,8 @@ while True:
             break
 
 for row in range(height)
-    for
+    for space in range(height - row)
+        print(" ")
+    for column in range(row + 1)
 
 
