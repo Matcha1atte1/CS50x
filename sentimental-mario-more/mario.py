@@ -4,7 +4,7 @@ while True:
             break
 
 for row in range(height):
-    for space in range(height - row):
+    for space in range(height - row - 1):
         print(" ", end="")
     for column in range(row + 1):
         print("#", end="")
