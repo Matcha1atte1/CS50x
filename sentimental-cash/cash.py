@@ -1,3 +1,6 @@
+from cs50 import get_float
+
+
 def calculate_quarters(cents):
     quarters = 0
     if cents < 25:
@@ -38,8 +41,6 @@ def calculate_pennies(cents):
     return pennies
 
 
-from cs50 import get_float
-
 def main():
     while True:
         try:
@@ -65,9 +66,5 @@ def main():
 
     print(coins)
 
+
 main()
-
-
-
-
-
