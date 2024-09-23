@@ -1,3 +1,5 @@
 while True:
-    height = int(input())
+    try:
+        height = int(
+
 
