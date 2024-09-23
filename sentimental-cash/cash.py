@@ -1,40 +1,40 @@
-def calculate_quarters(dollars):
+def calculate_quarters(cents):
     quarters = 0
-    if dollars < 0.25:
+    if cents < 25:
         return quarters
-    while dollars >= 0.25:
+    while cents >= 25:
         quarters += 1
-        dollars -= 0.25
+        cents -= 25
     return quarters
 
 
-def calculate_dimes(dollars):
+def calculate_dimes(cents):
     dimes = 0
-    if dollars < 0.10:
+    if cents < 10:
         return dimes
-    while dollars >= 0.10:
+    while cents >= 10:
         dimes += 1
-        dollars -= 0.10
+        cents -= 10
     return dimes
 
 
-def calculate_nickels(dollars):
+def calculate_nickels(cents): 
     nickels = 0
-    if dollars < 0.05:
+    if cents < 5:
         return nickels
-    while dollars > 0.05:
+    while cents > 5:
         nickels += 1
-        dollars -= 0.05
+        cents -= 5
     return nickels
 
 
-def calculate_pennies(dollars):
+def calculate_pennies(cents):
     pennies = 0
-    if dollars < 0.01:
+    if cents < 1:
         return pennies
-    while dollars > 0.01:
+    while cents > 1:
         pennies += 1
-        dollars -= 0.01
+        cents -= 1
     return pennies
 
 
@@ -48,17 +48,18 @@ def main():
                 break
         except ValueError:
             pass
-    quarters = calculate_quarters(dollars)
-    dollars = dollars - (quarters * 0.25)
+    cents = dollars * 100
+    quarters = calculate_quarters(cents)
+    cents = cents - (quarters * 25)
 
-    dimes = calculate_dimes(dollars)
-    dollars = dollars - (dimes * 0.10)
+    dimes = calculate_dimes(cents)
+    cents = cents - (dimes * 10)
 
-    nickels = calculate_nickels(dollars)
-    dollars = dollars - (nickels * 0.05)
+    nickels = calculate_nickels(cents)
+    cents = cents - (nickels * 5)
 
-    pennies = calculate_pennies(dollars)
-    dollars = dollars - (pennies * 0.01)
+    pennies = calculate_pennies(cents)
+    cents = cents - (pennies * 1)
 
     coins = quarters + dimes + nickels + pennies
 
