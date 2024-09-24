@@ -10,9 +10,10 @@ def main():
 
     # TODO: Read database file into a variable
     rows = []
+    databasefile = 
     with open("databases.csv") as file:
         reader = csv.DictReader(file)
-        print(reader.fieldnames)
+        data_names = reader.fieldnames[1:]
         for row in reader:
             rows.append(row)
 
@@ -24,7 +25,7 @@ def main():
     longestmatch = longest_match
 
     # TODO: Check database for matching profiles
-    
+
     return
 
 
