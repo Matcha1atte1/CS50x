@@ -13,6 +13,7 @@ def count_words(text):
             countw += 1
     return countw
 
+
 def count_sentences(text):
     counts = 0
     for char in text:
@@ -23,6 +24,7 @@ def count_sentences(text):
         if char == '?':
             counts += 1
     return counts
+
 
 def main():
     text = input("Text: ")
@@ -43,5 +45,6 @@ def main():
 
     else:
         print("Grade", index)
+
 
 main()
