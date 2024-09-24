@@ -7,6 +7,7 @@ def main():
     # TODO: Check for command-line usage
     if len(argv) != 3:
         print("Error: ")
+        sys.exit(1)
 
     # TODO: Read database file into a variable
     rows = []
@@ -19,7 +20,7 @@ def main():
 
     # TODO: Read DNA sequence file into a variable
     seqfile = sys.argv[2]
-    with open(sequences.txt) as file:
+    with open(seqfile) as file:
         sequences = f.read()
 
     # TODO: Find longest match of each STR in DNA sequence
