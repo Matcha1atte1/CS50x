@@ -30,7 +30,9 @@ def main():
     longestmatch = longest_match
 
     # TODO: Check database for matching profiles
-    
+    for row in rows:
+        for str_name in str_counts:
+            
 
     return
 
