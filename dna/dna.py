@@ -5,7 +5,7 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    if len(argv) != 3:
+    if len(sys.argv) != 3:
         print("Error: ")
         sys.exit(1)
 
@@ -79,6 +79,5 @@ def longest_match(sequence, subsequence):
 
     # After checking for runs at each character in seqeuence, return longest run found
     return longest_run
-
 
 main()
