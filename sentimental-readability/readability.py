@@ -1,5 +1,11 @@
 def count_letters(text):
     countl = 0
-    while True:
-        for i in range(len(text)):
-            
+    for char in text:
+        if char.isalpha():
+            countl += 1
+    return countl
+
+
+def count_words(text):
+    
+
