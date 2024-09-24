@@ -32,9 +32,14 @@ def main():
     # TODO: Check database for matching profiles
     for row in rows:
         for str_name in str_counts:
-            if int(row(str_name)) != str_counts[str_name]:
-                check = 
+            if int(row[str_name]) != str_counts[str_name]:
+                break
 
+        else:
+            print(row["Name"])
+            return
+
+    print("No match")
     return
 
 
