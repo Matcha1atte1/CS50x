@@ -43,3 +43,5 @@ def main():
 
     else:
         print("Grade", index)
+
+main()
