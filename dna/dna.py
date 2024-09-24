@@ -21,10 +21,10 @@ def main():
     f.read(sequences.txt)
 
     # TODO: Find longest match of each STR in DNA sequence
-    
+    longestmatch = longest_match
 
     # TODO: Check database for matching profiles
-
+    
     return
 
 
