@@ -9,7 +9,14 @@ def main():
         print("Error: ")
 
     # TODO: Read database file into a variable
-    with open(")
+    rows = []
+    with open("large.csv") as file:
+        reader = csv.DictReader(file)
+        print(reader.fieldnames)
+        for row in reader:
+            rows.append(row)
+
+
 
     # TODO: Read DNA sequence file into a variable
 
