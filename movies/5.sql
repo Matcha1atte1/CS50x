@@ -1,6 +1,7 @@
 SELECT title, year
 FROM movies
-JOIN people ON movies.id = people.id
+JOIN stars ON movies.id = stars.movie_id
+JOIN people ON stars.person_id = people.id
 WHERE people.name
-LIKE '%Harry Potter%.'
+LIKE '%Harry Potter%'
 ORDER BY year;
