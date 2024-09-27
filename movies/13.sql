@@ -15,4 +15,5 @@ WHERE id IN
             WHERE name LIKE '%Kevin Bacon%'
         )
     )
-);
+)
+AND name NOT LIKE '%Kevin Bacon%';
