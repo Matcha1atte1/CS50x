@@ -1,6 +1,6 @@
 SELECT name
 FROM people
-WHERE name LIKE '%Harry Potter%';
+WHERE name LIKE '%harry potter%';
 
 SELECT title, year
 FROM movies
