@@ -9,7 +9,16 @@ WHERE id IN
         SELECT id
         FROM people
         WHERE name LIKE '%Jennifer Lawrence%'
-        INTERSECT
-        name LIKE '%Bradley Cooper%'
+    )
+)
+AND id IN
+(
+    SELECT movie_id
+    FROM stars
+    WHERE person_id IN
+    (
+        SELECT id
+        FROM people
+        WHERE name LIKE '%Bradley Cooper%'
     )
 );
