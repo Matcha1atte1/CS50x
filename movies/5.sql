@@ -1,3 +1,3 @@
-SELECT COUNT(title)
+SELECT COUNT(*)
 FROM movies
-WHERE 
+WHERE rating = 10.0;
