@@ -8,6 +8,6 @@ WHERE id IN
     (
         SELECT id
         FROM people
-        WHERE name LIKE '%Jennifer Lawrence%' OR name LIKE '%Bradley Cooper%'
+        WHERE name LIKE '%Jennifer Lawrence%' AND name LIKE '%Bradley Cooper%'
     )
 );
