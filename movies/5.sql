@@ -1,5 +1,6 @@
 SELECT title, year
 FROM movies
+JOIN people ON movies.id = people
 WHERE name
 LIKE '%Harry Potter%.'
 ORDER BY year;
