@@ -17,8 +17,18 @@ WHERE year = 2023
 AND month = 7
 AND day = 28;
 
--- within 10 minutes of theft, thief got into a car at bakery parking lot, thief withdrew money at the ATM on Leggett Street, thief left the bakery and called soemone and talked less than a minute,
+-- within 10 minutes of theft, thief got into a car at bakery parking lot, thief withdrew money at the ATM on Leggett Street, thief left the bakery and called someone and talked less than a minute,
    plan to take the earliest flight out of fiftyville tomorrow, ask the person on the phone to buy ticket
+
+-- bakery_security_logs table
+SELECT license_plate
+FROM bakery_security_logs
+WHERE year = 2023
+AND month = 7
+AND day = 28
+AND hour = 10
+AND(minute BETWEEN 15 AND 25);
+
 
 
 
