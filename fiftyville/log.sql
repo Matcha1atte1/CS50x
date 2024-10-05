@@ -54,6 +54,8 @@ AND month = 7
 AND day = 29
 AND hour = 8;
 
+
+-- airports table to find the city the thief escaped to
 SELECT *
 FROM airports
 WHERE id = 4;
