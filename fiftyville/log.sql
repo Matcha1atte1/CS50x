@@ -8,4 +8,4 @@ AND month = 7
 AND day = 28
 AND street = 'Humphrey Street';
 
-
+-- 10.15am at Humphrey Street bakery
