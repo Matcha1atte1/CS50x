@@ -68,7 +68,7 @@ WHERE
 
 
 -- people table to find thief
-SELECT *
+SELECT passport_number
 FROM people
 WHERE phone_number IN
 (
@@ -95,7 +95,7 @@ SELECT *
 FROM passengers
 WHERE passport_number IN
 (
-    SELECT *
+    SELECT passport_number
     FROM people
     WHERE phone_number IN
 (
