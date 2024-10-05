@@ -39,7 +39,7 @@ AND atm_location = 'Leggett Street'
 AND transaction_type = 'withdraw';
 
 -- phone_calls table
-SELECT caller
+SELECT caller, receiver
 FROM phone_calls
 WHERE year = 2023
 AND month = 7
