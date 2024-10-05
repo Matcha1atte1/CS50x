@@ -8,7 +8,7 @@ AND month = 7
 AND day = 28
 AND street = 'Humphrey Street';
 
--- 10.15am at Humphrey Street bakery
+-- 3 witnesses, crime took place at 10.15am at Humphrey Street bakery
 
 -- bakery_security_logs table
 SELECT *
