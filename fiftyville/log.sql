@@ -54,6 +54,10 @@ AND month = 7
 AND day = 29
 AND hour = 8;
 
+SELECT *
+FROM airports
+WHERE id = 4;
+
 
 
 
