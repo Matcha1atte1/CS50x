@@ -61,6 +61,10 @@ FROM airports
 WHERE id = 4;
 
 -- bank_accounts table
+SELECT *
+FROM bank_accounts
+JOIN people ON person_id.bank_accounts = id.people
+WHERE 
 
 
 
