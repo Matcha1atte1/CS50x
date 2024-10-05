@@ -39,9 +39,12 @@ AND atm_location = 'Leggett Street'
 AND transaction_type = 'withdraw';
 
 -- phone_calls table
-SELECT *
+SELECT caller,receiver
 FROM phone_calls
-WHERE 
+WHERE year = 2023
+AND month = 7
+AND day = 28
+AND duration < 60;
 
 
 
