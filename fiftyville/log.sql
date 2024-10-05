@@ -18,7 +18,7 @@ AND month = 7
 AND day = 28;
 
 -- within 10 minutes of theft, thief got into a car at bakery parking lot, thief withdrew money at the ATM on Leggett Street earlier in the morning, thief left the bakery and called someone and talked less than a minute,
-   plan to take the earliest flight out of fiftyville tomorrow, ask the person on the phone to buy ticket
+-- plan to take the earliest flight out of fiftyville tomorrow, ask the person on the phone to buy ticket
 
 -- bakery_security_logs table
 SELECT license_plate
@@ -37,6 +37,11 @@ AND month = 7
 AND day = 28
 AND atm_location = 'Leggett Street'
 AND transaction_type = 'withdraw';
+
+-- phone_calls table
+SELECT *
+FROM phone_calls
+WHERE 
 
 
 
