@@ -10,18 +10,15 @@ AND street = 'Humphrey Street';
 
 -- 3 witnesses, crime took place at 10.15am at Humphrey Street bakery
 
--- bakery_security_logs table
-SELECT *
-FROM bakery_security_logs
-WHERE year = 2023
-AND month = 7
-AND day = 28;
-
 -- interviews table
 SELECT *
 FROM interviews
 WHERE year = 2023
 AND month = 7
 AND day = 28;
+
+-- within 10 minutes of theft, thief got into a car at bakery parking lot, thief withdrew money at the ATM on Leggett Street, thief left the bakery and called soemone and talked less than a minute,
+   plan to take the earliest flight out of fiftyville tomorrow, ask the person on the phone to buy ticket
+
 
 
