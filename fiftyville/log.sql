@@ -7,3 +7,5 @@ WHERE year = 2023
 AND month = 7
 AND day = 28
 AND street = 'Humphrey Street';
+
+-- output id 295,297
