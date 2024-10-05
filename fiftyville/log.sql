@@ -46,6 +46,13 @@ AND month = 7
 AND day = 28
 AND duration < 60;
 
+-- flights table
+SELECT *
+FROM flights
+WHERE year = 2023
+AND month = 7
+AND day = 29;
+
 
 
 
