@@ -47,7 +47,7 @@ AND day = 28
 AND duration < 60;
 
 -- flights table
-SELECT *
+SELECT destination_airport_id
 FROM flights
 WHERE year = 2023
 AND month = 7
@@ -59,6 +59,10 @@ AND hour = 8;
 SELECT *
 FROM airports
 WHERE id = 4;
+
+-- bank_accounts table
+
+
 
 
 
