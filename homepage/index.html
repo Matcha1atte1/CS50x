@@ -11,8 +11,11 @@
             // javascript
             document.addEventListener('DOMContentLoaded', function(){
 
-                let home = document.querySelector('#home')
-            })
+                let home = document.querySelector('#home');
+                home.addEventListener('click', function(){
+                    home.style.bakcgroundColor = 'blue';
+                });
+            });
         </script>
     </head>
     <body>
