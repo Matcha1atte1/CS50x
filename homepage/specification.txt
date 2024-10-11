@@ -1,0 +1,20 @@
+html tags used:
+<meta>
+<h>
+<nav>
+<a>
+<p>
+<ol>
+<ul>
+<img>
+<video>
+
+CSS properties used:
+background color
+color
+padding
+font size
+border
+
+i used javascript to make the links change colour when clicked
+i used Bootstrap to change the colour of the texts on the homepage easily 
