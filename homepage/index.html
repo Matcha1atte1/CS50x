@@ -19,6 +19,16 @@
                 let aboutme = document.querySelector('#aboutme');
                 aboutme.addEventListener('click', function(){
                     aboutme.style.backgroundColor = 'blue';
+                });
+
+                let hobby = document.querySelector('#hobby');
+                hobby.addEventListener('click', function(){
+                    hobby.style.backgroundColor = 'blue';
+                });
+
+                let sports = document.querySelector('#sports');
+                sports.addEventListener('click', function(){
+                    sports.style.backgroundColor = 'blue';
                 })
             });
         </script>
@@ -27,9 +37,9 @@
         <h1 class="centertext">Welcome to J's webpage</h1>
         <nav class="centertext">
             <a class = "text-black" href="index.html" id='home'>Home</a>
-            <a class = "text-black" href="aboutme.html">About Me</a>
-            <a class = "text-black" href="hobby.html">Hobby</a>
-            <a class = "text-black" href="sports.html">Sports</a>
+            <a class = "text-black" href="aboutme.html" id='aboutme'>About Me</a>
+            <a class = "text-black" href="hobby.html" id='hobby'>Hobby</a>
+            <a class = "text-black" href="sports.html" id='sports'>Sports</a>
         </nav>
         <main class="container mt-4">
             <p class="centertext">This is the main page of the wesbite, learn more about me through the links above</p>

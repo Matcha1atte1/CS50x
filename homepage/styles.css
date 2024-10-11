@@ -1,3 +1,36 @@
 .centertext{
     text-align: center;
 }
+
+#home{
+    background-color: lightcoral;
+    color: darkblue;
+    padding: 20px;
+    font-size: 10px;
+    border: 1px solid darkblue;
+}
+
+#aboutme{
+    background-color: lightcoral;
+    color: darkblue;
+    padding: 20px;
+    font-size: 10px;
+    border: 1px solid darkblue;
+
+}
+#hobby{
+    background-color: lightcoral;
+    color: darkblue;
+    padding: 20px;
+    font-size: 10px;
+    border: 1px solid darkblue;
+
+}
+#sports{
+    background-color: lightcoral;
+    color: darkblue;
+    padding: 20px;
+    font-size: 10px;
+    border: 1px solid darkblue;
+}
+
