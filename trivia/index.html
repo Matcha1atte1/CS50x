@@ -30,12 +30,15 @@
                  document.querySelector('#check').addEventListener('Click', function(){
                     let input = document.querySelector('input');
                     if(input.value == 'Africa'){
-                        input.style.backgroundColor
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = 'Correct!';
                     }
-                 }
-
-
-
+                    else{
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect';
+                    }
+                 });
+            });
         </script>
     </head>
     <body>
