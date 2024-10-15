@@ -42,6 +42,14 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
+    if request.method == "POST"
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+        # check for blank symbol
+        if not symbol:
+            return apology("Invalid symbol")
+        if 
+
     return apology("TODO")
 
 
