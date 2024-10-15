@@ -48,7 +48,15 @@ def buy():
         # check for blank symbol
         if not symbol:
             return apology("Invalid symbol")
-        if 
+        # check for valid symbol via lookup
+        quoted_data = lookup(symbol)
+
+        if quoted_data is None:
+            return apology("Invalid Symbol")
+
+        if shares < 0:
+            return apology("Invalid number of shares")
+        return redirect(/)
 
     return apology("TODO")
 
