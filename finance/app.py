@@ -122,6 +122,9 @@ def register():
     # check for matching passwords
     if password != confirmation:
         return apology("Passwords do not match")
+    # hash password
+    hash_password = generate_password_hash(password)
+
     # check if username already exists
     existing_user = db.execute("SELECT * FROM users WHERE username = ?", username)
 
