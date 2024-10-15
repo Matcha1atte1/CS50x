@@ -123,7 +123,8 @@ def register():
     if password != confirmation:
         return apology("Passwords do not match")
     # check if username already exists
-    existing_user = db.execute()
+    existing_user = db.execute("SELECT * FROM users WHERE username = ?", username)
+
 
 
 @app.route("/sell", methods=["GET", "POST"])
