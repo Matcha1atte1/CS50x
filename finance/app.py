@@ -118,9 +118,10 @@ def quote():
 
         quoted_data = lookup(symbol)
 
-        if not quoted_data:
-            
-        return render_template("quoted.html")
+        if quoted_data is None:
+            return apology("Invalid Symbol")
+
+        return render_template("quoted.html", )
     return apology("TODO")
 
 
