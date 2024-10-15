@@ -121,7 +121,7 @@ def quote():
         if quoted_data is None:
             return apology("Invalid Symbol")
 
-        return render_template("quoted.html", quoted=quoted_data)
+        return render_template("quoted.html", quoted=quoted_data, usd=usd)
 
     return apology("Invalid request")
 
