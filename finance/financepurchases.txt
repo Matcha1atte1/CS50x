@@ -4,5 +4,6 @@ CREATE TABLE purchases(
    symbol TEXT NOT NULL,
    shares INTEGER NOT NULL,
    price REAL NOT NULL,
-   timestamp 
+   timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+   FOREIGN KEY()
 )
