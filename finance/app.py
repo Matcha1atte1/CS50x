@@ -125,8 +125,14 @@ def register():
     # hash password
     hash_password = generate_password_hash(password)
 
-    # check if username already exists
-    existing_user = db.execute("SELECT * FROM users WHERE username = ?", username)
+    # insert user into users
+    try:
+        db.execute("INSERT into users (username, hash) VALUES (?, ?)", username, hash_password)
+    # except when there is duplicate username
+    except ValueError:
+        return apology("Username already exists")
+
+    return redirect("/login")
 
 
 
