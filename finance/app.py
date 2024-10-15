@@ -116,9 +116,14 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
-    # check if username exists and password match
-    if not username or not password or password != confirmation:
-        return apology("Invalid input")
+    # check for empty fields
+    if not username or not password or not confirmation:
+        return apology("All fields are required")
+    # check for matching passwords
+    if password != confirmation:
+        return apology("Passwords do not match")
+    # check if username already exists
+    existing_user = db.execute()
 
 
 @app.route("/sell", methods=["GET", "POST"])
