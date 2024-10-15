@@ -112,29 +112,30 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
      """Register user"""
-    if request.method == "POST"
+    if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
         confirmation = request.form.get("confirmation")
-    # check for empty fields
-    if not username or not password or not confirmation:
-        return apology("All fields are required")
-    # check for matching passwords
-    if password != confirmation:
-        return apology("Passwords do not match")
-    # hash password
-    hash_password = generate_password_hash(password)
+        # check for empty fields
+        if not username or not password or not confirmation:
+            return apology("All fields are required")
+        # check for matching passwords
+        if password != confirmation:
+            return apology("Passwords do not match")
+        # hash password
+        hash_password = generate_password_hash(password)
 
-    # insert user into users
-    try:
-        db.execute("INSERT into users (username, hash) VALUES (?, ?)", username, hash_password)
-    # except when there is duplicate username
-    except ValueError:
-        return apology("Username already exists")
+        # insert user into users
+        try:
+            db.execute("INSERT into users (username, hash) VALUES (?, ?)", username, hash_password)
+        # except when there is duplicate username
+        except ValueError:
+            return apology("Username already exists")
 
-    return redirect("/login")
 
-    return render_template("register.html")
+        return redirect("/login")
+
+return render_template("register.html")
 
 
 
