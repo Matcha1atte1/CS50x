@@ -56,7 +56,10 @@ def buy():
 
         if shares < 0:
             return apology("Invalid number of shares")
+
+
         
+
         # redirect to home page upon completion
         return redirect("/")
 
