@@ -121,8 +121,9 @@ def quote():
         if quoted_data is None:
             return apology("Invalid Symbol")
 
-        return render_template("quoted.html", )
-    return apology("TODO")
+        return render_template("quoted.html", quoted=quoted_data)
+
+    return apology("Invalid request")
 
 
 @app.route("/register", methods=["GET", "POST"])
