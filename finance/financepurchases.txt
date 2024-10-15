@@ -4,6 +4,9 @@ CREATE TABLE purchases(
    symbol TEXT NOT NULL,
    shares INTEGER NOT NULL,
    price REAL NOT NULL,
-   timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
-   FOREIGN KEY (id) REFERENCES users(id)
-)
+   timestamp DATETIME
+DEFAULT CURRENT_TIMESTAMP,
+   FOREIGN KEY (id)
+REFERENCES users(id),
+   UNIQUE(user_id, symbol, timestamp)
+);
