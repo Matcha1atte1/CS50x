@@ -53,9 +53,13 @@ def buy():
 
         if quoted_data is None:
             return apology("Invalid Symbol")
-
-        if shares < 0:
-            return apology("Invalid number of shares")
+        # check if shares is a positive integer
+        try:
+            shares = int(shares)
+            if shares <= 0:
+                return apology("Invalid number of shares")
+        except ValueError:
+                return apology("Shares must be a positive integer")
 
 
 
