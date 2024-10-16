@@ -61,13 +61,18 @@ def buy():
         except ValueError:
                 return apology("Shares must be a positive integer")
 
-        # check if user can afford shares at the current stock price
-
         # retrieve user's cash balance
         user_cash = db.execute("SELECT cash FROM users")
 
         # calculate the total cost
-        total_cost = shares * quoted_data
+        total_cost = shares * quoted_data["price"]
+
+        # check if user can afford shares at the current stock price
+
+        if user_cash < total_cost:
+            return apology("Insufficient cash")
+        else:
+            
 
 
 
