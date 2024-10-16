@@ -63,7 +63,7 @@ def buy():
 
         # retrieve user's cash balance
         user_id = session("user_id")
-        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
         # calculate the total cost
         total_cost = shares * quoted_data["price"]
@@ -73,6 +73,7 @@ def buy():
         if user_cash < total_cost:
             return apology("Insufficient cash")
         else:
+            # record the purchase 
             db.execute("INSERT INTO purchases (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)", user_id, symbol, shares, quoted_data["price"])
 
 
