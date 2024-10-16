@@ -79,16 +79,10 @@ def buy():
             # update the cash balance of the user
             db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_cost, user_id)
 
+            # redirect to home page upon completion
+            return redirect("/")
 
-
-
-
-
-
-        # redirect to home page upon completion
-        return redirect("/")
-
-    return apology("TODO")
+    return render_template("buy.html")
 
 
 @app.route("/history")
