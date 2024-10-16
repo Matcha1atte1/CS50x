@@ -72,7 +72,8 @@ def buy():
         if user_cash < total_cost:
             return apology("Insufficient cash")
         else:
-            
+            db.execute("INSERT INTO purchases (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)", user_id, symbol, shares, quoted_data["price"])
+
 
 
 
