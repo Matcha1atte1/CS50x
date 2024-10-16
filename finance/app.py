@@ -73,8 +73,11 @@ def buy():
         if user_cash < total_cost:
             return apology("Insufficient cash")
         else:
-            # record the purchase 
+            # record the purchase
             db.execute("INSERT INTO purchases (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)", user_id, symbol, shares, quoted_data["price"])
+
+            # update the cash balance of the user
+            db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_cost, user_id)
 
 
 
