@@ -42,7 +42,7 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    if request.method == "POST"
+    if request.method == "POST":
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
         # check for blank symbol
@@ -58,7 +58,9 @@ def buy():
             return apology("Invalid number of shares")
 
 
-        
+
+
+
 
         # redirect to home page upon completion
         return redirect("/")
