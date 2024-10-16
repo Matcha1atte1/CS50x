@@ -62,7 +62,7 @@ def buy():
                 return apology("Shares must be a positive integer")
 
         # retrieve user's cash balance
-        user_id = session("user_id")
+        user_id = session["user_id"]
         user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
         # calculate the total cost
