@@ -67,7 +67,7 @@ def buy():
         user_cash = db.execute("SELECT cash FROM users")
 
         # calculate the total cost
-        total_cost = shares * 
+        total_cost = shares * quoted_data
 
 
 
