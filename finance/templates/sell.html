@@ -10,5 +10,9 @@
     <form action="/sell" method="POST">
         <div class="form-group">
             <label for="symbol">Select Stock:</label>
+            <select name="symbol" id="symbol" required>
+                <option>Select a stock</option>
+                {% for stock in stocks %}
+            </select>
     </form>
 {% endblock %}
