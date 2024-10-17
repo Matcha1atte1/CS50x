@@ -42,9 +42,10 @@ def index():
     # query to get stocks owned by user
     user_stocks = db.execute("SELECT symbol, shares FROM purchases WHERE user_id = ?", user_id)
 
-    # lookup current price of stock
-    quoted_data = lookup(symbol)
-    current_price = quoted_data["price"]
+    # lookup current price of each stock
+    for stock in user_stocks:
+        quoted_data = lookup(symbol)
+        current_price = quoted_data["price"]
 
     # calculate total value of user's stock
     shares = db.execute("SELECT shares FROM purchases WHERE user_id = ? AND symbol = ?", user_id, symbol)
