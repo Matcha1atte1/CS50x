@@ -40,7 +40,7 @@ def index():
         return redirect("/login")
 
     # query to get stocks owned by user
-    user_stocks = db.execute("SELECT )
+    user_stocks = db.execute("SELECT symbol, shares FROM purchases WHERE user_id = ?", user_id)
     return apology("TODO")
 
 
