@@ -25,7 +25,7 @@
                 <td>{{ history.symbol }}</td>
                 <td>
                     {% if history.price is not none %}
-                    {{ "%.2f"|format(history.price) }}
+                    {{ "%.2f"|format(history.price | float) }}
                     {% else %}
                     N/A
                     {% endif %}
