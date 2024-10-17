@@ -35,7 +35,10 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    user_id = session
+    user_id = session.get('user_id')
+    if not user_id:
+        return redirect("/login")
+    
     return apology("TODO")
 
 
