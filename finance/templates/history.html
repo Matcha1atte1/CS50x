@@ -23,7 +23,13 @@
             <tr>
                 <td>{{ history.action }}</td>
                 <td>{{ history.symbol }}</td>
-                <td>{{ "%.2f"|format(history.price) }}</td>
+                <td>
+                    {% if history.price is not none %}
+                    {{ "%.2f"|format(history.price) }}
+                    {% else %}
+                    N/A
+                    {% endif %}
+                </td>
                 <td>{{ history.shares }}</td>
                 <td>{{ history.timestamp }}</td>
             </tr>
