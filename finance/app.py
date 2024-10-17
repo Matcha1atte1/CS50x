@@ -47,7 +47,7 @@ def index():
     current_price = quoted_data["price"]
 
     # calculate total value of user's stock
-    shares = db.execute("SELECT shares FROM purchases WHERE user_id = ?", user_id)
+    shares = db.execute("SELECT shares FROM purchases WHERE user_id = ? AND symbol = ?", user_id, symbol)
     total_value = shares * current_price
 
     return apology("TODO")
