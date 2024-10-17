@@ -61,7 +61,14 @@ def index():
         "total value": total_value
     })
 
+    # get user's current cash balance
+    user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
+    # calculate grand total
+    grand_total = total_value + user_cash
+
+    # render template and pass details
+    return render_template("index.html, stocks=stock_details
 
 
 
