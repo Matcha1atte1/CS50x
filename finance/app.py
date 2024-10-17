@@ -107,6 +107,7 @@ def buy():
         else:
             # record the purchase
             db.execute("INSERT INTO purchases (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)", user_id, symbol, shares, quoted_data["price"])
+            db.execute("INSERT INTO history (user_id, symbol, shares, price))
 
             # update the cash balance of the user
             db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_cost, user_id)
@@ -122,7 +123,7 @@ def buy():
 def history():
     """Show history of transactions"""
     user_id = session.get("user_id")
-    
+
     return apology("TODO")
 
 
