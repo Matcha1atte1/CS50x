@@ -233,5 +233,14 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "POST":
-        
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+
+        if not symbol:
+            return apology("Please select a stock")
+
+        try:
+            shares=int(shares)
+        except ValueError:
+            
     return apology("TODO")
