@@ -52,9 +52,8 @@ def index():
         quoted_data = lookup(symbol)
         current_price = quoted_data["price"]
         total_value = current_price * shares
-
-    # append stock details to list
-    stock_details.append({
+        # append stock details to list
+        stock_details.append({
         "symbol": symbol,
         "shares": shares,
         "current price": current_price,
