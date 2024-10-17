@@ -232,6 +232,8 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    user_id = session.get("user_id")
+    stocks = db.execute("SELECT symbol FROM purchases WHERE user_id=?", user_id)
     if request.method == "POST":
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
@@ -247,16 +249,13 @@ def sell():
             return apology("Number of shares must be a positive integer")
 
         # check if user owns the stock and if he has enough shares
-        user_id = session.get("user_id")
         owned_shares = db.execute("SELECT shares FROM purchases WHERE user_id=? AND symbol=?", user_id, symbol)
 
-        if owned_shares is NONE or owned_shares[0]["shares"] < shares:
+        if owned_shares is None or owned_shares[0]["shares"] < shares:
             return apology("Insufficient shares")
 
         # proceed with sale
-        db.execute("UPDATE purchases SET shares = shares - ? WHERE user_id = ? AND symbol = ?", shares, user_id, symbol)
-
-        stocks = db.execute("SELECT symbol FROM purchases WHERE user_id=?", user_id)
+        db.execute("UPDATE purchases SET shares = shares - ? WHERE user_id=? AND symbol = ?", shares, user_id, symbol)
 
         return redirect("/")
 
