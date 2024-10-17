@@ -68,11 +68,7 @@ def index():
     grand_total = total_value + user_cash
 
     # render template and pass details
-    return render_template("index.html, stocks=stock_details, cashbalance=user_cash, grandtotal = grand_total)
-
-
-
-    return apology("TODO")
+    return render_template("index.html", stocks=stock_details, cashbalance=user_cash, grandtotal = grand_total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
