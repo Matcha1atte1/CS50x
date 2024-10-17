@@ -44,6 +44,7 @@ def index():
 
     # Initialise list to store stock details of user
     stock_details = []
+    total_value = 0
 
     # lookup current price of each stock and calculate total value
     for stock in user_stocks:
