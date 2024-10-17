@@ -57,7 +57,8 @@ def index():
     stock_details.append({
         "symbol": symbol,
         "shares": shares,
-        "
+        "current price": current_price,
+        "total value": total_value
     })
 
 
