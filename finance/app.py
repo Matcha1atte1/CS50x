@@ -38,7 +38,9 @@ def index():
     user_id = session.get('user_id')
     if not user_id:
         return redirect("/login")
-    
+
+    # query to get stocks owned by user
+    user_stocks = db.execute("SELECT )
     return apology("TODO")
 
 
