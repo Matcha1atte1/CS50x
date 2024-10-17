@@ -11,7 +11,7 @@
     <div class="container">
         <h2>Portfolio</h2>
 
-        <table>
+        <table class="table">
             <thead>
                 <tr>
                     <th>Stock Symbol</th>
@@ -21,23 +21,18 @@
                 </tr>
             </thead>
             <tbody>
-                {% for stock in stocks}
+                {% for stock in stocks %}
                 <tr>
                     <td>{{ stock.symbol }}</td>
                     <td>{{ stock.shares }}</td>
-                    <td>{{ </td>
-
-
+                    <td>{{ "%.2f" | format(stock.current price) }}</td>
+                    <td>{{ "%.2f" | format(stock.total value) }}</td>
                 </tr>
-
+                {% endfor %}
             </tbody>
         </table>
 
-
-
-
-
-
-
+        <h3>Cash balance: ${{ "%.2f" | format(cashbalance) }}</h3>
+        <h3>Grand Total: ${{ "%.2f" | format(grandtotal) }}</h3>
     </div>
 {% endblock %}
