@@ -13,6 +13,10 @@
             <select name="symbol" id="symbol" required>
                 <option>Select a stock</option>
                 {% for stock in stocks %}
+                <option value="{{ stock.symbol }}"">{{ stock.symbol }}</option>
             </select>
+        </div>
+
+        
     </form>
 {% endblock %}
