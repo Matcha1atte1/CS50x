@@ -42,6 +42,9 @@ def index():
     # query to get stocks owned by user
     user_stocks = db.execute("SELECT symbol, shares FROM purchases WHERE user_id = ?", user_id)
 
+    # Initialise list to store stock details of user
+    stock_details = []
+
     # lookup current price of each stock and calculate total value
     for stock in user_stocks:
         symbol = stock["symbol"]
@@ -50,7 +53,13 @@ def index():
         current_price = quoted_data["price"]
         total_value = current_price * shares
 
-        # store current price and total value in a list
+    # append stock details to list
+    stock_details.append({
+        "symbol": symbol,
+        "shares": shares,
+        "
+    })
+
 
 
 
