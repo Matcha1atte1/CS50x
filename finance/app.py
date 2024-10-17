@@ -246,6 +246,11 @@ def sell():
         except ValueError:
             return apology("Number of shares must be a positive integer")
 
-        
+        # check if user owns the stock and if he has enough shares
+        user_id = session.get("user_id")
+        owned_shares = db.execute("SELECT shares FROM purchases WHERE id=? AND symbol=?", user_id, symbol)
+
+        if owned_shares is NONE
+
 
     return apology("TODO")
