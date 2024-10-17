@@ -47,6 +47,7 @@ def index():
     current_price = quoted_data["price"]
 
     # calculate total value of user's stock
+    total_value = 
 
     return apology("TODO")
 
