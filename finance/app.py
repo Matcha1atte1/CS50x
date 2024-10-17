@@ -56,11 +56,11 @@ def index():
         total_value += stocktv
         # append stock details to list
         stock_details.append({
-        "symbol": symbol,
-        "shares": shares,
-        "current_price": current_price,
-        "total_value": stocktv
-    })
+            "symbol": symbol,
+            "shares": shares,
+            "current_price": current_price,
+            "total_value": stocktv
+        })
 
     # get user's current cash balance
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
@@ -69,7 +69,7 @@ def index():
     grand_total = total_value + user_cash
 
     # render template and pass details
-    return render_template("index.html", stocks=stock_details, cashbalance=user_cash, grandtotal = grand_total, usd=usd)
+    return render_template("index.html", stocks=stock_details, cashbalance=user_cash, grandtotal=grand_total, usd=usd)
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -93,7 +93,7 @@ def buy():
             if shares <= 0:
                 return apology("Invalid number of shares")
         except ValueError:
-                return apology("Shares must be a positive integer")
+            return apology("Shares must be a positive integer")
 
         # retrieve user's cash balance
         user_id = session["user_id"]
@@ -108,7 +108,8 @@ def buy():
             return apology("Insufficient cash")
         else:
             # record the purchase
-            db.execute("INSERT INTO purchases (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)", user_id, symbol, shares, quoted_data["price"])
+             db.execute("INSERT INTO purchases (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)",
+                        user_id, symbol, shares, quoted_data["price"])
             price = quoted_data["price"]
             db.execute("INSERT INTO history (user_id, symbol, shares, price, action) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, price, "buy")
 
