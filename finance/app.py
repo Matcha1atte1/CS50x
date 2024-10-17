@@ -52,13 +52,14 @@ def index():
         shares = stock["shares"]
         quoted_data = lookup(symbol)
         current_price = quoted_data["price"]
-        total_value = current_price * shares
+        stocktv = current_price * shares
+        total_value += stocktv
         # append stock details to list
         stock_details.append({
         "symbol": symbol,
         "shares": shares,
         "current_price": current_price,
-        "total_value": total_value
+        "total_value": stocktv
     })
 
     # get user's current cash balance
