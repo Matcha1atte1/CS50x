@@ -241,6 +241,11 @@ def sell():
 
         try:
             shares=int(shares)
+            if shares <= 0:
+                return apology("Number of shares must be a positive integer")
         except ValueError:
-            
+            return apology("Number of shares must be a positive integer")
+
+        
+
     return apology("TODO")
