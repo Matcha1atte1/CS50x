@@ -25,8 +25,8 @@
                 <tr>
                     <td>{{ stock.symbol }}</td>
                     <td>{{ stock.shares }}</td>
-                    <td>{{ "%.2f"|format(stock.current_price) | usd }}</td>
-                    <td>{{ "%.2f"|format(stock.total_value) | usd }}</td>
+                    <td>{{ stock.current_price | usd }}</td>
+                    <td>{{ stock.total_value | usd }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
