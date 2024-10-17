@@ -50,6 +50,8 @@ def index():
         current_price = quoted_data["price"]
         total_value = current_price * shares
 
+        # store current price and total value in a list
+
 
 
 
