@@ -253,5 +253,9 @@ def sell():
         if owned_shares is NONE or owned_shares[0]["shares"] < shares:
             return apology("Insufficient shares")
 
+        # proceed with sale
+        db.execute("UPDATE purchases SET shares = shares - ? WHERE user_id = ? AND symbol = ?", shares, user_id, symbol)
 
-    return apology("TODO")
+        return redirect("/")
+
+    return render_template("sell.html")
