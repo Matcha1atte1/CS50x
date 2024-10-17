@@ -250,7 +250,8 @@ def sell():
         user_id = session.get("user_id")
         owned_shares = db.execute("SELECT shares FROM purchases WHERE id=? AND symbol=?", user_id, symbol)
 
-        if owned_shares is NONE or owned_shares
+        if owned_shares is NONE or owned_shares[0]["shares"] < shares:
+            return apology("Insufficient shares")
 
 
     return apology("TODO")
