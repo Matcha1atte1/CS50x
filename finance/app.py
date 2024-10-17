@@ -261,7 +261,8 @@ def sell():
         # proceed with sale
         db.execute("UPDATE purchases SET shares = shares - ? WHERE user_id=? AND symbol = ?", shares, user_id, symbol)
         quoted_data = lookup(symbol)
-        db.execute("INSERT INTO history (user_id, symbol, shares, price, action) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, quoted_data["price"], "sell")
+        price = quoted_data["price"]
+        db.execute("INSERT INTO history (user_id, symbol, shares, price, action) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, price, "sell")
 
         return redirect("/")
 
