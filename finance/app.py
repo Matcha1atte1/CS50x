@@ -121,6 +121,8 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
+    user_id = session.get("user_id")
+    
     return apology("TODO")
 
 
