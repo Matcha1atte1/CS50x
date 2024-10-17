@@ -248,7 +248,7 @@ def sell():
 
         # check if user owns the stock and if he has enough shares
         user_id = session.get("user_id")
-        owned_shares = db.execute("SELECT shares FROM purchases WHERE id=? AND symbol=?", user_id, symbol)
+        owned_shares = db.execute("SELECT shares FROM purchases WHERE user_id=? AND symbol=?", user_id, symbol)
 
         if owned_shares is NONE or owned_shares[0]["shares"] < shares:
             return apology("Insufficient shares")
