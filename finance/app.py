@@ -256,6 +256,8 @@ def sell():
         # proceed with sale
         db.execute("UPDATE purchases SET shares = shares - ? WHERE user_id = ? AND symbol = ?", shares, user_id, symbol)
 
+        stocks = db.execute("SELECT symbol FROM purchases WHERE user_id=?", user_id)
+
         return redirect("/")
 
-    return render_template("sell.html")
+    return render_template("sell.html", stocks=stocks)
