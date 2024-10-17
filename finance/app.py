@@ -44,6 +44,7 @@ def index():
 
     # lookup current price of stock
     quoted_data = lookup(symbol)
+    current_price = quoted_data["price"]
 
     # calculate total value of user's stock
 
