@@ -108,7 +108,7 @@ def buy():
             return apology("Insufficient cash")
         else:
             # record the purchase
-             db.execute("INSERT INTO purchases (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)",
+            db.execute("INSERT INTO purchases (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)",
                         user_id, symbol, shares, quoted_data["price"])
             price = quoted_data["price"]
             db.execute("INSERT INTO history (user_id, symbol, shares, price, action) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, price, "buy")
