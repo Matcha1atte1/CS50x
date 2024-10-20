@@ -24,6 +24,8 @@ while running:
     # fill screen with the background colour, dark green
     screen.fill(background_colour)
 
+    pygame.display.flip()
+
 
 
 
