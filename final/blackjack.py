@@ -5,4 +5,6 @@ import sys
 pygame.init()
 
 # window dimensions
-scree_width
+screen_width, screen_height = 800, 600
+screen = 
+
