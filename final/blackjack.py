@@ -21,4 +21,17 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
+    # 
+
+
+
+
+
+
+
+
+# quit pygame
+pygame.quit() # clear pygame resources
+sys.exit() # exit program
+
 
