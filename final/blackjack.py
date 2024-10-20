@@ -11,7 +11,7 @@ screen = pygame.display.set_mode(screen_width, screen_height)
 # window title
 pygame.display.set_caption('Blackjack Game')
 
-# set colour of blackjack table
+# set variable to hold the colour of blackjack table, dark green
 background_colour = (0, 128, 0)
 
 # main game loop
@@ -21,7 +21,8 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    # 
+    # fill screen with the background colour, dark green
+    screen.fill(background_colour)
 
 
 
