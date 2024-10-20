@@ -11,3 +11,6 @@ screen = pygame.display.set_mode(screen_width, screen_height)
 # window title
 pygame.display.set_caption('Blackjack Game')
 
+# set colour of blackjack table
+background_colour = (0, 128, 0)
+
