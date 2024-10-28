@@ -1,6 +1,7 @@
 import os
 os.environ['SDL_VIDEODRIVER'] = 'x11'
 os.environ['SDL_RENDER_DRIVER'] = 'software'
+os.environ['SDL_VIDEODRIVER'] = 'directx'
 import pygame
 import sys
 
