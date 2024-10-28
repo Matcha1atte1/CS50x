@@ -1,4 +1,6 @@
 import os
+os.environ['SDL_VIDEODRIVER'] = 'x11'  # For X11
+os.environ['SDL_RENDER_DRIVER'] = 'opengl' 
 import pygame
 import sys
 
