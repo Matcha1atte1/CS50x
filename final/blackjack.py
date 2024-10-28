@@ -1,6 +1,6 @@
 import os
 os.environ['SDL_VIDEODRIVER'] = 'x11'  # For X11
-os.environ['SDL_RENDER_DRIVER'] = 'opengl' 
+os.environ['SDL_RENDER_DRIVER'] = 'opengl'
 import pygame
 import sys
 
@@ -30,10 +30,6 @@ while running:
     screen.fill(background_colour)
 
     pygame.display.flip()
-
-
-
-
 
 
 
