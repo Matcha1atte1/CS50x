@@ -5,10 +5,12 @@ import pygame
 import sys
 
 # intitialise pygame
+print("Initializing Pygame...")
 pygame.init()
 
 # window dimensions
 screen_width, screen_height = 800, 600
+print(f"Creating display window of size {screen_width}x{screen_height}")
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 # window title
