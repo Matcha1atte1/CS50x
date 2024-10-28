@@ -1,5 +1,5 @@
 import os
-os.environ['SDL_VIDEODRIVER'] = 'x11'
+os.environ['SDL_VIDEODRIVER'] = 'dummy'
 os.environ['SDL_RENDER_DRIVER'] = 'software'
 import pygame
 import sys
