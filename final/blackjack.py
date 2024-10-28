@@ -1,8 +1,6 @@
 import os
 import pygame
 import sys
-os.environ['SDL_RENDER_DRIVER'] = 'software'
-
 # intitialise pygame
 print("Initializing Pygame...")
 pygame.init()
