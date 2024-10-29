@@ -31,4 +31,8 @@ def calculate_hand_value(hand):
             value += int(rank)
 
     # adjust for aces
-    
+    while value > 21 and ace_count > 0:
+        value -= 10
+        ace_count -= 1
+
+    return value
