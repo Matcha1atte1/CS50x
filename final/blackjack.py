@@ -10,3 +10,7 @@ deck = [f"{value} of {suit}" for suit in suits for value in values]
 # function to shuffle deck
 def shuffle_deck(deck):
     random.shuffle(deck)
+
+# function to deal a card
+def deal_card(deck):
+    return deck.pop()
