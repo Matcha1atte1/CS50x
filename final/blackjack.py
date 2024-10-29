@@ -38,7 +38,7 @@ def calculate_hand_value(hand):
     return value
 
 def display_hand(person, hand):
-    print(f"{person}'s hand value: {calculate_hand_value(hand)})
+    print(f"{person}'s hand value: {calculate_hand_value(hand)}")
 
 
 # main game flow
@@ -55,5 +55,6 @@ def blackjack():
 
         # player turn
         while True:
+            display_hand(player, player_hand)
 
 
