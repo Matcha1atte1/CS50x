@@ -40,4 +40,7 @@ def calculate_hand_value(hand):
 
 # main game flow
 def blackjack():
-    
+    print("Welcome to BlackJack")
+
+    while True:
+        
