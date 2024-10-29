@@ -109,9 +109,10 @@ def buy():
         else:
             # record the purchase
             db.execute("INSERT INTO purchases (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)",
-                        user_id, symbol, shares, quoted_data["price"])
+                       user_id, symbol, shares, quoted_data["price"])
             price = quoted_data["price"]
-            db.execute("INSERT INTO history (user_id, symbol, shares, price, action) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, price, "buy")
+            db.execute("INSERT INTO history (user_id, symbol, shares, price, action) VALUES (?, ?, ?, ?, ?)",
+                       user_id, symbol, shares, price, "buy")
 
             # update the cash balance of the user
             db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_cost, user_id)
@@ -127,7 +128,8 @@ def buy():
 def history():
     """Show history of transactions"""
     user_id = session.get("user_id")
-    history = db.execute("SELECT symbol, shares, price, action, timestamp FROM history WHERE user_id = ? ORDER BY timestamp DESC", user_id)
+    history = db.execute(
+        "SELECT symbol, shares, price, action, timestamp FROM history WHERE user_id = ? ORDER BY timestamp DESC", user_id)
 
     return render_template("history.html", history=history)
 
@@ -229,11 +231,9 @@ def register():
         except ValueError:
             return apology("Username already exists")
 
-
         return redirect("/login")
 
     return render_template("register.html")
-
 
 
 @app.route("/sell", methods=["GET", "POST"])
@@ -250,23 +250,26 @@ def sell():
             return apology("Please select a stock")
 
         try:
-            shares=int(shares)
+            shares = int(shares)
             if shares <= 0:
                 return apology("Number of shares must be a positive integer")
         except ValueError:
             return apology("Number of shares must be a positive integer")
 
         # check if user owns the stock and if he has enough shares
-        owned_shares = db.execute("SELECT shares FROM purchases WHERE user_id=? AND symbol=?", user_id, symbol)
+        owned_shares = db.execute(
+            "SELECT shares FROM purchases WHERE user_id=? AND symbol=?", user_id, symbol)
 
         if owned_shares is None or owned_shares[0]["shares"] < shares:
             return apology("Insufficient shares")
 
         # proceed with sale
-        db.execute("UPDATE purchases SET shares = shares - ? WHERE user_id=? AND symbol = ?", shares, user_id, symbol)
+        db.execute("UPDATE purchases SET shares = shares - ? WHERE user_id=? AND symbol = ?",
+                   shares, user_id, symbol)
         quoted_data = lookup(symbol)
         price = quoted_data["price"]
-        db.execute("INSERT INTO history (user_id, symbol, shares, price, action) VALUES (?, ?, ?, ?, ?)", user_id, symbol, shares, price, "sell")
+        db.execute("INSERT INTO history (user_id, symbol, shares, price, action) VALUES (?, ?, ?, ?, ?)",
+                   user_id, symbol, shares, price, "sell")
 
         return redirect("/")
 
