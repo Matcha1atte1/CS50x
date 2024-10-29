@@ -62,7 +62,43 @@ def blackjack():
 
             action = input("Do u want to hit (h) or stand (s)?").lower()
             if action == "h":
-                
+                player_hand.append(deal_card(deck))
+            elif action =="s":
+                break
+            else:
+                print("Invalid input")
+
+        # check if player busted
+        if caclulate_hand_value(player_hand) > 21:
+            print("Dealer wins!")
+        else:
+            # dealer turn
+            while calculate_hand_value(dealer_hand) < 17:
+                dealer_hand.appened(deal_card(deck))
+
+            display_hand("dealer", dealer_hand)
+
+            # determine winner
+            if calculate_hand_value(dealer_hand) > 21:
+                print("Dealer busts, you win!")
+            elif calculate_hand_value(player_hand) > calculate_hand_value(dealer_hand):
+                print("You win!")
+            elif calculate_hand_value(player_hand) < calculate_hand_value(dealer_hand):
+                print("You lose!")
+            else:
+                print("Tie!")
+
+        # ask to play again
+        play_again = input("Do you want to play again? (y/n): ").lower()
+        if play_again != y:
+            break
+
+    print("Thank you for playing!")
+
+# start game
+blackjack()
+
+
 
 
 
