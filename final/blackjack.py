@@ -39,4 +39,5 @@ def calculate_hand_value(hand):
 
 
 # main game flow
-
+def blackjack():
+    
