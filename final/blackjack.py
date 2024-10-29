@@ -37,6 +37,8 @@ def calculate_hand_value(hand):
 
     return value
 
+def display_hand()
+
 
 # main game flow
 def blackjack():
@@ -46,4 +48,4 @@ def blackjack():
         # deal one card each
         player_hand, dealer_hand = deal_card(deck)
 
-        
+
