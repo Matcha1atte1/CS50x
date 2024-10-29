@@ -1,4 +1,6 @@
 Project title: BlackJack
 Name: Lim Hong Ming Jovan
+Github username: Starl1ght1
 Year: 2024
 Country: Singapore
+Date of recording: 29 October 2024
