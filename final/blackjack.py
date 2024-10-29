@@ -38,7 +38,7 @@ def calculate_hand_value(hand):
     return value
 
 def display_hand(person, hand):
-    print(f"{person}'s Hand: )
+    print(f"{person}'s hand value: {calculate_hand_value(hand)})
 
 
 # main game flow
