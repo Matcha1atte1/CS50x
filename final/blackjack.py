@@ -21,4 +21,4 @@ def calculate_hand_value(hand):
     ace_count = 0
 
     for card in hand:
-        
+        rank = card.split(' ')[0]
