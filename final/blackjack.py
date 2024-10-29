@@ -52,4 +52,7 @@ def blackjack():
         player_hand = [deal_card(deck), deal_card(deck)]
         dealer_hand =  [deal_card(deck), deal_card(deck)]
 
+        # player turn
+        while True:
+            
 
