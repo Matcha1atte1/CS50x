@@ -69,12 +69,12 @@ def blackjack():
                 print("Invalid input")
 
         # check if player busted
-        if caclulate_hand_value(player_hand) > 21:
+        if calculate_hand_value(player_hand) > 21:
             print("Dealer wins!")
         else:
             # dealer turn
             while calculate_hand_value(dealer_hand) < 17:
-                dealer_hand.appened(deal_card(deck))
+                dealer_hand.append(deal_card(deck))
 
             display_hand("dealer", dealer_hand)
 
@@ -90,7 +90,7 @@ def blackjack():
 
         # ask to play again
         play_again = input("Do you want to play again? (y/n): ").lower()
-        if play_again != y:
+        if play_again != 'y':
             break
 
     print("Thank you for playing!")
