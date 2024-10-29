@@ -60,6 +60,9 @@ def blackjack():
                 print("Bust, you lose!")
                 break
 
-            action = 
+            action = input("Do u want to hit (h) or stand (s)?").lower()
+            if action == "h":
+                
+
 
 
