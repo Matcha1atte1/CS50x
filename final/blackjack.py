@@ -17,4 +17,8 @@ def deal_card(deck):
 
 # function to calculate hand value
 def calculate_hand_value(hand):
-    
+    value = 0
+    ace_count = 0
+
+    for card in hand:
+        
