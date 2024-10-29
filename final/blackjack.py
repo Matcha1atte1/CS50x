@@ -55,6 +55,11 @@ def blackjack():
 
         # player turn
         while True:
-            display_hand(player, player_hand)
+            display_hand("player", player_hand)
+            if calculate_hand_value(player_hand) > 21:
+                print("Bust, you lose!")
+                break
+
+            action = 
 
 
