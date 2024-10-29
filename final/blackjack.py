@@ -28,4 +28,7 @@ def calculate_hand_value(hand):
             ace_count += 1
             value += 11
         else:
-            value += int
+            value += int(rank)
+
+    # adjust for aces
+    
