@@ -14,3 +14,6 @@ def shuffle_deck(deck):
 # function to deal a card
 def deal_card(deck):
     return deck.pop()
+
+# function to calculate hand value
+def calculate_hand_value()
