@@ -22,3 +22,10 @@ def calculate_hand_value(hand):
 
     for card in hand:
         rank = card.split(' ')[0]
+        if rank in ["J", "Q", "K"]:
+            value += 10
+        elif rank=="A":
+            ace_count += 1
+            value += 11
+        else:
+            value += int
