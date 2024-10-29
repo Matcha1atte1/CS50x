@@ -16,4 +16,5 @@ def deal_card(deck):
     return deck.pop()
 
 # function to calculate hand value
-def calculate_hand_value()
+def calculate_hand_value(hand):
+    
