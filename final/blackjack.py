@@ -43,4 +43,7 @@ def blackjack():
     print("Welcome to BlackJack")
 
     while True:
+        # deal one card each
+        player_hand, dealer_hand = deal_card(deck)
+
         
