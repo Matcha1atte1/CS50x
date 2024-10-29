@@ -49,6 +49,7 @@ def blackjack():
         shuffle_deck(deck)
 
         # deal two cards each
-        player_hand, dealer_hand = [deal_card(deck), deal_card(deck)]
+        player_hand = [deal_card(deck), deal_card(deck)]
+        dealer_hand =  [deal_card(deck), deal_card(deck)]
 
 
