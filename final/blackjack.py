@@ -45,7 +45,10 @@ def blackjack():
     print("Welcome to BlackJack")
 
     while True:
-        # deal one card each
-        player_hand, dealer_hand = deal_card(deck)
+        # shuffle deck
+        shuffle_deck(deck)
+
+        # deal two cards each
+        player_hand, dealer_hand = [deal_card(deck), deal_card(deck)]
 
 
