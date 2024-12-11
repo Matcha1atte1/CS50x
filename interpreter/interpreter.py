@@ -1,10 +1,12 @@
 expression = input("Expression: ")
 x , y, z = expression.split(" ")
+x = float(x)
+y = float(y)
 if y == '+' :
-    print(float(x + z))
+    print(x + z)
 elif y == '-' :
-    print(float(x - z))
+    print(x - z)
 elif y == '*' :
-    print(float(x * z))
+    print(x * z)
 elif y == '/' :
-    print(float(x / z))
+    print(x / z)
