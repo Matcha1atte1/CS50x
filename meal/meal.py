@@ -1,8 +1,9 @@
 def main():
 
 time = input("What time is it?")
-convert(time)
-if
+hours = convert(time)
+if hours in range[7,8]:
+    
 
 
 def convert(time):
